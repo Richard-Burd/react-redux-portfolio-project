@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Airframe.create!(name: "Xwing", weight: 3, config: "wing", image: "imgur.com/futures/1")
+Airframe.create!(name: "RV-Jet", weight: 4, config: "wing", image: "imgur.com/futures/2")
