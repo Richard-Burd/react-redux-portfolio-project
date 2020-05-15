@@ -213,3 +213,388 @@ Processing by AirframesController#show as HTML
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 720)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAttitudes (20200515155135)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "attitudes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "lim_roll_cd" integer, "lim_pitch_max" integer, "lim_pitch_min" integer, "airframe_id" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515155135"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePids (20200515155347)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "pids" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "rll2srv_rmax" integer, "rll2srv_d" integer, "rll2srv_t_const" integer, "airframe_id" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515155347"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePlugins (20200515155545)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "plugins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "arspd_enable" integer, "arspd_use" integer, "mag_enable" integer, "airframe_id" integer)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515155545"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Create (0.4ms)[0m  [1m[32mINSERT INTO "airframes" ("name", "weight", "config", "image") VALUES (?, ?, ?, ?)[0m  [["name", "Xwing"], ["weight", 3], ["config", 0], ["image", "imgur.com/futures/1"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttitude Create (0.5ms)[0m  [1m[32mINSERT INTO "attitudes" ("lim_roll_cd", "lim_pitch_max", "lim_pitch_min", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["lim_roll_cd", 5], ["lim_pitch_max", 6], ["lim_pitch_min", 7], ["airframe_id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPid Create (0.4ms)[0m  [1m[32mINSERT INTO "pids" ("rll2srv_rmax", "rll2srv_d", "rll2srv_t_const", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["rll2srv_rmax", 5], ["rll2srv_d", 6], ["rll2srv_t_const", 7], ["airframe_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlugin Create (0.5ms)[0m  [1m[32mINSERT INTO "plugins" ("arspd_enable", "arspd_use", "mag_enable", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["arspd_enable", 5], ["arspd_use", 6], ["mag_enable", 7], ["airframe_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Create (0.5ms)[0m  [1m[32mINSERT INTO "airframes" ("name", "weight", "config", "image") VALUES (?, ?, ?, ?)[0m  [["name", "RV-Jet"], ["weight", 4], ["config", 0], ["image", "imgur.com/futures/2"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAttitude Create (0.4ms)[0m  [1m[32mINSERT INTO "attitudes" ("lim_roll_cd", "lim_pitch_max", "lim_pitch_min", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["lim_roll_cd", 7], ["lim_pitch_max", 8], ["lim_pitch_min", 9], ["airframe_id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPid Create (0.4ms)[0m  [1m[32mINSERT INTO "pids" ("rll2srv_rmax", "rll2srv_d", "rll2srv_t_const", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["rll2srv_rmax", 7], ["rll2srv_d", 8], ["rll2srv_t_const", 9], ["airframe_id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlugin Create (0.4ms)[0m  [1m[32mINSERT INTO "plugins" ("arspd_enable", "arspd_use", "mag_enable", "airframe_id") VALUES (?, ?, ?, ?)[0m  [["arspd_enable", 7], ["arspd_use", 8], ["mag_enable", 9], ["airframe_id", 2]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPid Load (0.0ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 2], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-05-15 09:13:32 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 38.4ms | Allocations: 461)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 2497)
+
+
+Started GET "/airframes" for ::1 at 2020-05-15 09:13:39 -0700
+Processing by AirframesController#index as HTML
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 6940)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-15 09:13:45 -0700
+Processing by AirframesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1457)
+
+
+Started GET "/airframes/1/attitudes" for ::1 at 2020-05-15 09:13:51 -0700
+Processing by AttitudesController#index as HTML
+  Parameters: {"airframe_id"=>"1"}
+  [1m[36mAttitude Load (0.2ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes"[0m
+  ↳ app/controllers/attitudes_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 5667)
+
+
+Started GET "/airframes/1/attitudes/1" for ::1 at 2020-05-15 09:13:58 -0700
+Processing by AttitudesController#show as HTML
+  Parameters: {"airframe_id"=>"1", "id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 820)
+
+
+Started GET "/airframes/1/attitudes" for ::1 at 2020-05-15 09:14:10 -0700
+Processing by AttitudesController#index as HTML
+  Parameters: {"airframe_id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes"[0m
+  ↳ app/controllers/attitudes_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 989)
+
+
+Started GET "/airframes/1/attitude" for ::1 at 2020-05-15 09:14:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/airframes/1/attitude"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/airframes/1/attitudes" for ::1 at 2020-05-15 09:14:41 -0700
+Processing by AttitudesController#index as HTML
+  Parameters: {"airframe_id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes"[0m
+  ↳ app/controllers/attitudes_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 974)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-15 09:16:18 -0700
+Processing by AirframesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/attitudes" for ::1 at 2020-05-15 09:16:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/attitudes"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/attitude" for ::1 at 2020-05-15 09:16:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/attitude"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/airframe/1" for ::1 at 2020-05-15 09:16:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/airframe/1"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/airframes" for ::1 at 2020-05-15 09:17:05 -0700
+Processing by AirframesController#index as HTML
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1203)
+
+
+Started GET "/airframes/2" for ::1 at 2020-05-15 09:17:11 -0700
+Processing by AirframesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 706)
+
+
+Started GET "/airframes/2/pids" for ::1 at 2020-05-15 09:17:18 -0700
+Processing by PidsController#index as HTML
+  Parameters: {"airframe_id"=>"2"}
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids"[0m
+  ↳ app/controllers/pids_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 5250)
+
+
+Started GET "/" for ::1 at 2020-05-15 09:33:01 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.5ms | Allocations: 461)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2497)
+
+
+Started GET "/airframes" for ::1 at 2020-05-15 09:33:03 -0700
+Processing by AirframesController#index as HTML
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 6940)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-15 09:33:04 -0700
+Processing by AirframesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 1457)
+
+
+Started GET "/airframes/1/attitudes" for ::1 at 2020-05-15 09:33:15 -0700
+Processing by AttitudesController#index as HTML
+  Parameters: {"airframe_id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes"[0m
+  ↳ app/controllers/attitudes_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 5667)
+
+
+Started GET "/airframes/1/attitudes/1" for ::1 at 2020-05-15 09:33:18 -0700
+Processing by AttitudesController#show as HTML
+  Parameters: {"airframe_id"=>"1", "id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 820)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-15 09:33:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/attitudes/1"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/airframes/1/attitudes/1" for ::1 at 2020-05-15 09:33:49 -0700
+Processing by AttitudesController#show as HTML
+  Parameters: {"airframe_id"=>"1", "id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 691)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-15 09:35:18 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AirframesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 7150)
+
+
+Started GET "/pids/1" for ::1 at 2020-05-15 09:35:27 -0700
+Processing by PidsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pids_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 5502)
+
+
+Started GET "/pids" for ::1 at 2020-05-15 09:35:55 -0700
+Processing by PidsController#index as HTML
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids"[0m
+  ↳ app/controllers/pids_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 1007)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.2ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 4], ["LIMIT", 1]]
+  [1m[36mPid Load (0.2ms)[0m  [1m[34mSELECT "pids".* FROM "pids" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 4], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPid Load (0.0ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 4], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPid Load (0.1ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 4], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" ORDER BY "airframes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlugin Load (0.1ms)[0m  [1m[34mSELECT "plugins".* FROM "plugins" WHERE "plugins"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 4], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mAirframe Load (0.2ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 2], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPid Load (0.0ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 2], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPlugin Load (0.1ms)[0m  [1m[34mSELECT "plugins".* FROM "plugins" WHERE "plugins"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 2], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPlugin Load (0.0ms)[0m  [1m[34mSELECT "plugins".* FROM "plugins" WHERE "plugins"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes"[0m
+  [1m[36mPid Load (0.0ms)[0m  [1m[34mSELECT "pids".* FROM "pids" WHERE "pids"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 2], ["LIMIT", 1]]
