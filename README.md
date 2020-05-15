@@ -1,20 +1,25 @@
 ## Next Sprint
-1.) create folder structure in React app based on this workspace:
-    https://github.com/Richard-Burd/react-redux-sandbox/tree/master/React-Redux-Tutorials/react-redux-demo
 
-2.) Install all the necessary libraries for a react-redux workspace
+1.) Install all the necessary libraries for a react-redux workspace
     a.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npx install redux react-redux
     b.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install react-router-dom
     c.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-thunk
     d.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install redux-logger
     e.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-devtools-extension
 
-3.) Delete unnecessary react icons and simplify App.js
+2.) Delete unnecessary react icons and simplify App.js
 
-4.) create a simple React (native) component that console logs a series of fetches:
+3.) create a simple React (native) component that console logs a series of fetches:
     a.) shows all airframes
     b.) shows a selected airframe
     c.) selects the attitude for a specified airframe
+
+4.) Create the necessary store, action & reducer files needed to fetch airframes & display them in a component
+
+## Completed Tasks
+
+1.) create folder structure in React app based on this workspace:
+    https://github.com/Richard-Burd/react-redux-sandbox/tree/master/React-Redux-Tutorials/react-redux-demo
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:
