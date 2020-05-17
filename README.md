@@ -5,14 +5,27 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) Delete unnecessary react icons and simplify App.js
+1.) create a new & seperate "Test" component to make sure the React Router
+    stuff is working properly.
+    a.) create a set of simple links within (and inbetween) the files in them
+        "tests" folder
 
-2.) create a simple React (native) component that console logs a series of fetches:
-    a.) shows all airframes
-    b.) shows a selected airframe
+2.) create an "update" fetch for the airframes
 
-    c.) shows an attitude for a specified airframe (specified as a parameter passed into a JS function)
-    d.)
+3.) Delete unnecessary react icons and simplify App.js
+
+4.) create read actions (index...not show...show will never be used in this app)
+    for the other objects bs/ seeing one at a time isn't a thing:
+    a.) attitude
+    b.) pid
+    c.) pluggins
+
+5.) create an "update" action for the other objects:
+    a.) attitude
+    b.) Pid
+    c.) Pluggins
+    NOTE: you do not need a "delete" or "create action" for any of these...
+    ...you just need to be able to update them
 
 ## Completed Tasks
 
@@ -27,6 +40,9 @@ x.) Install all the necessary libraries for a react-redux workspace
     e.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-devtools-extension
 
 x.) Create the necessary store, action & reducer files needed to fetch astronauts and use them as an example for testing the libraries to make sure they are functioning properly in this workspace
+
+x.) in the delete action for airframes, add the extra code needed to delete
+    all of the commensurate data: Pids, Attitude, et. al.
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

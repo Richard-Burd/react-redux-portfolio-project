@@ -5,7 +5,7 @@ import { fetchAstronauts } from '../redux'
 function AstronautsContainer ({ astronautData, fetchAstronauts }) {
   useEffect(() => {
     fetchAstronauts()
-  }, [])
+  }, [fetchAstronauts],) // this: [] contains the dependency array that contains all the values that your useEffect depends on
   return astronautData.loading ? (
     <h2>Loading</h2>
   ) : astronautData.error ? (

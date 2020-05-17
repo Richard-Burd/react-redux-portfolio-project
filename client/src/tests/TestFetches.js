@@ -1,31 +1,72 @@
 import React, { Component } from 'react'
 
+const BASE_URL = "http://localhost:3001"
+const AIRFRAMES_URL = `${BASE_URL}/airframes`
+
 export default class TestFetches extends Component {
 
-  addAirframe = (/*name, weight, config, URL */) => {
-    console.log('Here is where we will add an airframe to the database');
+  createAirframe = (airframeData) => {
+    fetch(AIRFRAMES_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        // the "value"s aren't included here because there isn't a <form> yet.
+        "java_script_name": airframeData.name,//.value,
+        "java_script_weight": airframeData.weight,//.value,
+        "java_script_config": airframeData.config,//.value,
+        "java_script_image": airframeData.image//.value
+      })
+    })
+    .then(function(json) {
+      document.location.reload(true);
+    });
   }
-  
-  readAllAirframes = () => {
+
+  // This talks to the index controller action in airframes_controller.rb
+  getAllAirframes = () => {
     console.log('Airframes:');
-    fetch('http://localhost:3001/airframes')
+    fetch(AIRFRAMES_URL)
       .then(response => response.json())
       .then(json => console.log(json));
   }
 
+  // This talks to the show controller action in airframes_controller.rb
+  getOneAirframe = (airframeId) => {
+    console.log('Single Airframe');
+    fetch(`${AIRFRAMES_URL}/${airframeId}`)
+      .then(response => response.json())
+      .then(json => console.log(json));
+  }
+
+  // This talks to the update controller action in airframes_controller.rb
   updateAirframe = (/*name, weight, config, URL */) => {
     console.log('Here is where we will update an airframe to the database');
   }
 
-  deleteAirframe = (/*name, weight, config, URL */) => {
-    console.log('Here is where we will update an airframe to the database');
+
+  // This talks to the destroy controller action in airframes_controller.rb
+  deleteAirframe = (airframeId) => {
+    return fetch(`${AIRFRAMES_URL}/${airframeId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+    })
   }
 
   render() {
     return (
       <div>
-        <span>Let's console log fetching functions that CRUD an airframe</span>
-        {this.readAllAirframes()}
+        <span>Copy the fetching functions in here and their commensurate calls below to test them out</span>
+        {this.getAllAirframes()}
+        {this.getOneAirframe(1)}
+        {/*this.deleteAirframe(2)*/}
+        {/*createAirframe({name: "A", weight: 2, config: 1, image: "url.com"})*/}
+        {/* deleteAirframe(2) */}
       </div>
     )
   }
