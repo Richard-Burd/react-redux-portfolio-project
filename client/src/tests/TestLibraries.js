@@ -11,37 +11,12 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const initialTestState = {
-  testState: 10
-}
-
-function testOneReducer(state = initialTestState, action){}
-
-function testTwoReducer(state = initialTestState, action){}
-
-// this is modeled after rootReducer:
-// https://github.com/Richard-Burd/react-redux-sandbox/blob/master/React-Redux-Tutorials/react-redux-demo/src/redux/rootReducer.js
-const testRootReducer = combineReducers({
-  testOne: testOneReducer,
-  testTwo: testTwoReducer,
-})
-
-// this is modeled after store:
-// https://github.com/Richard-Burd/react-redux-sandbox/blob/master/React-Redux-Tutorials/react-redux-demo/src/redux/store.js
-const testStore = createStore(
-  testRootReducer,
-  composeWithDevTools(applyMiddleware(logger, thunk))
-)
-
 export default class TestLibraries extends Component {
 
   render() {
     return (
       <div>
         <p>"TestLibraries" - all libraries load properly if no errors occur in console</p>
-        <Provider store={testStore}>
-
-        </Provider>
       </div>
     )
   }
