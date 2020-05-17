@@ -1,14 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TempBurdTestComponent from './TempBurdTestComponent'
+import TestLibraries from './tests/TestLibraries'
 
 function App() {
   return (
     <div className="App">
-      <div>Burd's Test Content
-      <TempBurdTestComponent />
-      </div>
+      <TestLibraries />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

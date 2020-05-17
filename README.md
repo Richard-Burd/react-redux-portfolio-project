@@ -10,7 +10,9 @@ remember to enter this in the project main directory:
 2.) create a simple React (native) component that console logs a series of fetches:
     a.) shows all airframes
     b.) shows a selected airframe
-    c.) selects the attitude for a specified airframe
+
+    c.) shows an attitude for a specified airframe (specified as a parameter passed into a JS function)
+    d.)
 
 3.) Create the necessary store, action & reducer files needed to fetch airframes & display them in a component
 
