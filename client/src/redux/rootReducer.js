@@ -3,9 +3,7 @@ import astronautReducer from './astronaut/astronautReducer'
 
 const rootReducer = combineReducers({
   astronaut: astronautReducer,
-  //cake: cakeReducer,
-  //iceCream: iceCreamReducer,
-  //user: userReducer
+  // the next object and accompanying reducer go here
 })
 
 export default rootReducer

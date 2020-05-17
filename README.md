@@ -14,8 +14,6 @@ remember to enter this in the project main directory:
     c.) shows an attitude for a specified airframe (specified as a parameter passed into a JS function)
     d.)
 
-3.) Create the necessary store, action & reducer files needed to fetch airframes & display them in a component
-
 ## Completed Tasks
 
 x.) create folder structure in React app based on this workspace:
@@ -27,6 +25,8 @@ x.) Install all the necessary libraries for a react-redux workspace
     c.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-thunk
     d.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install redux-logger
     e.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-devtools-extension
+
+x.) Create the necessary store, action & reducer files needed to fetch astronauts and use them as an example for testing the libraries to make sure they are functioning properly in this workspace
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:
