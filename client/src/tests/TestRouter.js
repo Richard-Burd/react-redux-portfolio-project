@@ -7,7 +7,7 @@ export function TestRouter() {
   return (
     <div>
       <Router>
-        <TestNavlinks /> {/* exact can go in 2 different places */}
+        <TestNavlinks />
         <Switch>
           <Route exact path="/test-home" component={TestHomepage} />  {/* exact can go in 2 different places */}
           <Route path="/test-about" exact component={TestAboutpage} />{/* exact can go in 2 different places */}

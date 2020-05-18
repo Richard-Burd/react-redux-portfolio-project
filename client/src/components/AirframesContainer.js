@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchAirframes } from '../redux'
+import { Link } from 'react-router-dom';
 
 function AirframesContainer ({ airframeData, fetchAirframes }) {
   useEffect(() => {
@@ -17,12 +18,9 @@ function AirframesContainer ({ airframeData, fetchAirframes }) {
         {airframeData &&
           airframeData.airframes &&
           airframeData.airframes.map((airframe, index) =>
-            <div key={index}>
-              <h2>{airframe.name}</h2>
-              <h3>Configuration: {airframe.config}</h3>
-              <h3>Weight: {airframe.weight} lbs.</h3>
-              <img src={airframe.image} alt="airframe" />
-            </div>
+            <Link key={index} to={`/airframes/${index}`}>
+                <h2>{airframe.name}</h2>
+            </Link>
           )}
       </div>
     </div>

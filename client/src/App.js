@@ -1,29 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import AirframesContainer from './components/AirframesContainer'
+import Navbar from './Navbar'
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // used for testing functionality & troubleshooting problems
-import TestPortal from './tests/TestPortal'
+// import TestPortal from './tests/TestPortal'
 
 function App() {
   return (
-    <div className="App">
-      <TestPortal />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Provider store={store}>
+        <div className="App">
+          {/* <TestPortal /> */}
+          <Navbar />
+          <Route exact path='/airframes' render={routerProps => <AirframesContainer {...routerProps} airframes={store.airframes}/>} />
+        </div>
+      </Provider>
+    </Router>
   );
 }
 
