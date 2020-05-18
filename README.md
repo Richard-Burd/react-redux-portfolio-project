@@ -5,7 +5,7 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) create a new & seperate "Test" component to make sure the React Router
+1.) create a new & separate "Test" component to make sure the React Router
     stuff is working properly.
     a.) create a set of simple links within (and inbetween) the files in them
         "tests" folder

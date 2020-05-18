@@ -1,8 +1,9 @@
 // This test portal is used for testing functionality & troubleshooting problems.
-// It uses the "Astronauts" object to fetch, store, act, then reduce with Redux functionality 
-import React, { Component } from 'react'
-import TestLibraries from './TestLibraries'
-import TestReduxWorkflow from './TestReduxWorkflow'
+// It uses the "Astronauts" object to fetch, store, act, then reduce with Redux functionality
+import React, { Component } from 'react';
+import TestLibraries from './TestLibraries';
+import TestReduxWorkflow from './TestReduxWorkflow';
+import { TestRouter, TestHomepage, TestAboutpage } from './TestRouter';
 import TestFetches from './TestFetches'
 
 export default class TestPortal extends Component {
@@ -11,6 +12,7 @@ export default class TestPortal extends Component {
       <div>
         <TestLibraries />
         <TestReduxWorkflow />
+        <TestRouter />
         <TestFetches />
       </div>
     )

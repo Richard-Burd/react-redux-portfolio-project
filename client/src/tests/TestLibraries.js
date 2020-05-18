@@ -4,8 +4,9 @@
 
 // These dependencies should load if they were installed properly:
 import React, { Component } from 'react';
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux'
-import { Link }from 'react-router-dom';
+import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+//import { Router, Route } from 'react-router'
 import { connect, Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -16,7 +17,8 @@ export default class TestLibraries extends Component {
   render() {
     return (
       <div>
-        <p>"TestLibraries" - all libraries load properly if no errors occur in console</p>
+        <p>"TestLibraries" - all libraries load properly if no red errors occur in console</p>
+        <p>A list of yellow errors should occur that say each component "...is defined but never used" </p>
       </div>
     )
   }
