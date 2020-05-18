@@ -3,7 +3,7 @@ class CreateAirframes < ActiveRecord::Migration[6.0]
     create_table :airframes do |t|
       t.string :name
       t.integer :weight
-      t.integer :config
+      t.string :config
       t.string :image
     end
   end

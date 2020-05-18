@@ -5,22 +5,38 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) create a new & separate "Test" component to make sure the React Router
-    stuff is working properly.
-    a.) create a set of simple links within (and inbetween) the files in them
-        "tests" folder
+1.) get imgur images for see data airframes.
+    a.) note the sizes and make CSS that controls the size of all images per application
+        illustration
 
-2.) create an "update" fetch for the airframes
+2.) Once that basic page is rendering airframe names, add delete buttons to each one
+    a.) this includes a delete action
+    b.) this includes a delete "case" in the reducer
 
-3.) Delete unnecessary react icons and simplify App.js
+3.) go through and mimic the astronauts redux-workflow for the airframes, get everything working.
 
-4.) create read actions (index...not show...show will never be used in this app)
+4.) at some point you need to make an illustration of what you're calling the "redux-workflow"
+    so that you actually understand what the hell is going on with it and can make the rest of
+    the app.
+
+
+
+
+
+?.) go back to the DevEd React Routes tutorial & see how to implement dynamic routes, they
+    will be needed to implement the other pages in the application.
+
+?.) create an "update" fetch for the airframes
+
+?.) Delete unnecessary react icons and simplify App.js
+
+?.) create read actions (index...not show...show will never be used in this app)
     for the other objects bs/ seeing one at a time isn't a thing:
     a.) attitude
     b.) pid
     c.) pluggins
 
-5.) create an "update" action for the other objects:
+?.) create an "update" action for the other objects:
     a.) attitude
     b.) Pid
     c.) Pluggins
@@ -43,6 +59,17 @@ x.) Create the necessary store, action & reducer files needed to fetch astronaut
 
 x.) in the delete action for airframes, add the extra code needed to delete
     all of the commensurate data: Pids, Attitude, et. al.
+
+x.) create a new & separate "Test" component to make sure the React Router
+    stuff is working properly.
+    a.) create a set of simple links within (and inbetween) the files in them
+        "tests" folder
+
+x.) The next step is to get a page to render that shows a list of existing airframes
+    a.) Make sure you have at least 3 airframes in the seed data prior to starting this
+
+
+
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

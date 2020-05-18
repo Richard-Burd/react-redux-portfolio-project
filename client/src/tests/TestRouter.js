@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 // ---------- "BrowserRouter as Router" just saves the time of writing out BrowserRouter each time it is used.
 import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';

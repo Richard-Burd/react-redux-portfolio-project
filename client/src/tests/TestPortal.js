@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import TestLibraries from './TestLibraries';
 import TestReduxWorkflow from './TestReduxWorkflow';
-import { TestRouter, TestHomepage, TestAboutpage } from './TestRouter';
+import { TestRouter } from './TestRouter';
 import TestFetches from './TestFetches'
 
 export default class TestPortal extends Component {

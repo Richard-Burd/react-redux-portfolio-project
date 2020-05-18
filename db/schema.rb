@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_155545) do
   create_table "airframes", force: :cascade do |t|
     t.string "name"
     t.integer "weight"
-    t.integer "config"
+    t.string "config"
     t.string "image"
   end
 

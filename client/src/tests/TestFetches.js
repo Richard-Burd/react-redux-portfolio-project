@@ -42,8 +42,21 @@ export default class TestFetches extends Component {
   }
 
   // This talks to the update controller action in airframes_controller.rb
-  updateAirframe = (/*name, weight, config, URL */) => {
-    console.log('Here is where we will update an airframe to the database');
+  updateAirframe = (airframeId, airframeData) => {
+    return fetch(`${AIRFRAMES_URL}/${airframeId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        // the "value"s aren't included here because there isn't a <form> yet.
+        "java_script_name": airframeData.name,//.value,
+        "java_script_weight": airframeData.weight,//.value,
+        "java_script_config": airframeData.config,//.value,
+        "java_script_image": airframeData.image//.value
+      })
+    });
   }
 
 
@@ -64,8 +77,9 @@ export default class TestFetches extends Component {
         <span>Copy the fetching functions in here and their commensurate calls below to test them out</span>
         {this.getAllAirframes()}
         {this.getOneAirframe(1)}
-        {/*this.deleteAirframe(2)*/}
-        {/*createAirframe({name: "A", weight: 2, config: 1, image: "url.com"})*/}
+        {/* this.deleteAirframe(2) */}
+        {/* createAirframe({name: "A", weight: 2, config: 1, image: "url.com"}) */}
+        {/* updateAirframe(1, {name: "Updated Airframe Name", weight: 1000, config: 1, image: "update.url.com"}) */}
         {/* deleteAirframe(2) */}
       </div>
     )
