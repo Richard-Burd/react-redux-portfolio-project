@@ -5,6 +5,14 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
+1.) Left off on Airframe.js
+    a.) figure out how to fetch & render a single airframe on that page.
+    b.) use the correct lifecycle hooks if needed.
+    c.) you need to match the patterns in the Nested Routes lab:
+        i.) the "App" doesn't have <Switch> logic
+        i.) you need the ({ match, movies }) logic you see on the MoviesPage component in order
+            to get an individual airframe to properly render
+
 1.) get imgur images for see data airframes.
     a.) note the sizes and make CSS that controls the size of all images per application
         illustration

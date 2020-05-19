@@ -18,7 +18,7 @@ function AirframesContainer ({ airframeData, fetchAirframes }) {
         {airframeData &&
           airframeData.airframes &&
           airframeData.airframes.map((airframe, index) =>
-            <Link key={index} to={`/airframes/${index}`}>
+            <Link key={airframe.id} to={`/airframes/${airframe.id}`}>
                 <h2>{airframe.name}</h2>
             </Link>
           )}
