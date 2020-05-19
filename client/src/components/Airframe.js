@@ -1,25 +1,31 @@
 import React, { Component } from 'react'
 
 export default class Airframe extends Component {
-  // fetch a single airframe in this location
-  // maybe use getState or some other hook...
+  state = {
+    loading: true,
+    airframe: null,
+  }
+
+  async componentDidMount(){
+    const response = await fetch(`http://localhost:3001/airframes/${this.props.match.params.airframeId}`);
+    const data = await response.json();
+    this.setState({ airframe: data, loading: false });
+  }
+
   render() {
     return (
-      <div>Single Airframe Goes Here</div>
-    )
+      <div>
+        {this.state.loading || !this.state.airframe ? (
+          <div>loading...</div>
+        ) : (
+          <div>
+            <div>{this.state.airframe.name}</div>
+            <div>{this.state.airframe.weight}</div>
+            <div>{this.state.airframe.config}</div>
+            <img src={this.state.airframe.image} alt="airframe" />
+          </div>
+        )}
+      </div>
+    );
   }
 }
-
-
-/*
-const Airframe = ({ airframe }) => {
-  console.log("I'm here");
-  console.log(airframe);
-    return (
-      <div>
-        <h3>Single Airframe</h3>
-      </div>
-    )
-}
-export default Airframe;
-*/
