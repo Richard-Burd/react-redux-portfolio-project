@@ -11,6 +11,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // used for testing functionality & troubleshooting problems
 // import TestPortal from './tests/TestPortal'
 
+// This will test the initial state
+console.log('here is the store.getState()');
+store.subscribe(()=> console.log(store.getState()))
+
 function App() {
   return (
     <Router>

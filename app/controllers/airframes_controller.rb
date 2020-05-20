@@ -1,6 +1,11 @@
 class AirframesController < ApplicationController
   def index
-    airframes = Airframe.all
+    # airframes = Airframe.all
+
+    # to make this as efficient as possible, we only need to grab the name and id
+    # since we are not displaing airframe details all at once, since we have
+    # each airframe on a seperate route in the current configuration.
+    airframes = Airframe.select(:name, :id)
     render json: airframes
   end
 

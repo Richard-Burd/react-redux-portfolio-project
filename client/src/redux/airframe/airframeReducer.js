@@ -1,6 +1,7 @@
-const reducer = (state = { airframes: [], loading: false }, action) => {
+const reducer = (state = { airframes: [], airframe: {}, loading: false }, action) => {
   switch (action.type) {
 
+    // multiple airframes
     case 'START_ADDING_AIRFRAMES_REQUEST':
       return {
         ...state,
@@ -8,10 +9,27 @@ const reducer = (state = { airframes: [], loading: false }, action) => {
         loading: true
       }
 
+    // multiple airframes
     case 'ADD_AIRFRAMES':
       return {
         ...state,
         airframes: action.airframes,
+        loading: false
+      }
+
+    // single airframe
+    case 'START_ADDING_AIRFRAME_REQUEST':
+      return {
+        ...state,
+        airframe: state.airframe,
+        loading: true
+      }
+
+    // single airframe
+    case 'ADD_AIRFRAME':
+      return {
+        ...state,
+        airframe: action.airframe,
         loading: false
       }
 
