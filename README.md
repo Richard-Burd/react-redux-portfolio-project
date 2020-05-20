@@ -5,17 +5,19 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) Left off on Airframe.js
-    a.) figure out how to fetch & render a single airframe on that page.
-    b.) use the correct lifecycle hooks if needed.
-    c.) you need to match the patterns in the Nested Routes lab:
-        i.) the "App" doesn't have <Switch> logic
-        i.) you need the ({ match, movies }) logic you see on the MoviesPage component in order
-            to get an individual airframe to properly render
+1.) put an "Edit" button on the Airframe.js page that takes you to:
+    localhost3000/airframes/1/edit <= there you will have four buttons:
+    a.) edit basic params
+    b.) edit attitude params
+    c.) edit pid params
+    d.) edit plugin params
 
-1.) get imgur images for see data airframes.
-    a.) note the sizes and make CSS that controls the size of all images per application
-        illustration
+2.) the next step is to create buttons for getting each of the parameter lists:
+    a.) attitude params
+    b.) PID params
+    c.) plugins params
+
+1.) style the images in CSS with controls on the sizes
 
 2.) Once that basic page is rendering airframe names, add delete buttons to each one
     a.) this includes a delete action
@@ -29,29 +31,35 @@ remember to enter this in the project main directory:
 
 
 
+## Completed Tasks
 
-
-?.) go back to the DevEd React Routes tutorial & see how to implement dynamic routes, they
+x.) go back to the DevEd React Routes tutorial & see how to implement dynamic routes, they
     will be needed to implement the other pages in the application.
 
-?.) create an "update" fetch for the airframes
+x.) create an "update" fetch for the airframes
 
-?.) Delete unnecessary react icons and simplify App.js
+x.) Delete unnecessary react icons and simplify App.js
 
-?.) create read actions (index...not show...show will never be used in this app)
+x.) create read actions (index...not show...show will never be used in this app)
     for the other objects bs/ seeing one at a time isn't a thing:
     a.) attitude
     b.) pid
     c.) pluggins
 
-?.) create an "update" action for the other objects:
+x.) create an "update" action for the other objects:
     a.) attitude
     b.) Pid
     c.) Pluggins
     NOTE: you do not need a "delete" or "create action" for any of these...
     ...you just need to be able to update them
 
-## Completed Tasks
+x.) Left off on Airframe.js
+    a.) figure out how to fetch & render a single airframe on that page.
+    b.) use the correct lifecycle hooks if needed.
+    c.) you need to match the patterns in the Nested Routes lab:
+        i.) the "App" doesn't have <Switch> logic
+        i.) you need the ({ match, movies }) logic you see on the MoviesPage component in order
+            to get an individual airframe to properly render
 
 x.) create folder structure in React app based on this workspace:
     https://github.com/Richard-Burd/react-redux-sandbox/tree/master/React-Redux-Tutorials/react-redux-demo
@@ -76,7 +84,7 @@ x.) create a new & separate "Test" component to make sure the React Router
 x.) The next step is to get a page to render that shows a list of existing airframes
     a.) Make sure you have at least 3 airframes in the seed data prior to starting this
 
-
+x.) put a delete button on Airframe.js and get the
 
 
 ## Instructions for Setting up Backend API for Final Portfolio Project

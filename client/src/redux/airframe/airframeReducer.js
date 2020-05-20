@@ -33,6 +33,20 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: false
       }
 
+    case 'START_DELETING_AIRFRAME':
+      return {
+        ...state,
+        airframe: state.airframe,
+        loading: true
+      }
+
+    case 'DELETE_AIRFRAME':
+      return {
+        ...state,
+        singleAirframe: action.singleAirframe,
+        loading: false
+      }
+
     default:
       return state;
   }

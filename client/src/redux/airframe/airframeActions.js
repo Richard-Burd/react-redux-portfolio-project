@@ -1,10 +1,6 @@
 export const fetchAirframes = () => {
-
-  // fetch requests return a function that can have side effects
-  return (dispatch) => {
-
-    // this will set loading to true
-    dispatch({ type: 'START_ADDING_AIRFRAMES_REQUEST'})
+  return (dispatch) => { // fetch requests return a function that can have side effects
+    dispatch({ type: 'START_ADDING_AIRFRAMES_REQUEST'}) // this will set loading to true
     fetch('http://localhost:3001/airframes').then(response => {
       return response.json()
     }).then(responseJSON => {
@@ -13,27 +9,33 @@ export const fetchAirframes = () => {
   };
 }
 
-// was trying to minic thes:
-// https://stackoverflow.com/questions/52883652/react-redux-pass-variable-to-action
-// https://stackoverflow.com/questions/54633658/how-to-pass-variable-when-dispatching-fetch-function-in-react-component
-// search for: "export function fetchAlbums(id)"
 export function fetchAirframe(airframeId) {
-  console.log(`inside the top layer of the fetchAirframes function with an airframe id of: ${airframeId}`)
-
-
-
   return (dispatch) => {
-    console.log(`inside the returned dispatch with an airframe id of: ${airframeId}`)
-
-
-
     dispatch({ type: 'START_ADDING_AIRFRAME_REQUEST'}) // so far, the code crashes below and cannot read: airframeId
     fetch(`http://localhost:3001/airframes/${airframeId}`).then(response => {
       return response.json()
     }).then(responseJSON => {
       dispatch({ type: 'ADD_AIRFRAME', singleAirframe: responseJSON })
     })
-
   };
-
 }
+
+export function deleteAirframe(airframeId) {
+  return (dispatch) => {
+    dispatch({ type: 'START_DELETING_AIRFRAME'}) // so far, the code crashes below and cannot read: airframeId
+    fetch(`http://localhost:3001/airframes/${airframeId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      }
+    })
+    .then(response => {
+      document.location.href = "http://localhost:3000/airframes"
+    })
+    // .then(responseJSON => {
+    //   dispatch({ type: 'DELETE_AIRFRAME', singleAirframe: responseJSON })
+    // })
+  };
+}
+// document.location.href = "http://mobile.mysite.com"
