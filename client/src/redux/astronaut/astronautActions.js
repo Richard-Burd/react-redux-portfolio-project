@@ -1,3 +1,4 @@
+// NOTE: this is used for the testing suite to make sure all of the dependency libraries are up and working.
 export const fetchAstronauts = () => {
 
   // fetch requests return a function that can have side effects

@@ -1,3 +1,4 @@
+// NOTE: this is used for the testing suite to make sure all of the dependency libraries are up and working.
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchAstronauts } from '../redux'

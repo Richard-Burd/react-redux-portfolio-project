@@ -1,3 +1,8 @@
+// This code is inactive & preserved for reference only.
+// The objective was to get the Airframe component working with just React and not Redux
+// before pulling Redux into the picture.
+
+/*
 import React, { Component } from 'react'
 
 export default class Airframe extends Component {
@@ -29,3 +34,4 @@ export default class Airframe extends Component {
     );
   }
 }
+*/
