@@ -33,9 +33,21 @@ export function deleteAirframe(airframeId) {
     .then(response => {
       document.location.href = "http://localhost:3000/airframes"
     })
-    // .then(responseJSON => {
-    //   dispatch({ type: 'DELETE_AIRFRAME', singleAirframe: responseJSON })
-    // })
   };
 }
-// document.location.href = "http://mobile.mysite.com"
+
+export function updateAirframe(airframeId) {
+  return (dispatch) => {
+    dispatch({ type: 'UPDATE_AIRFRAME'}) // so far, the code crashes below and cannot read: airframeId
+    fetch(`http://localhost:3001/airframes/${airframeId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      }
+    })
+    .then(response => {
+      document.location.href = `http://localhost:3001/airframes/${airframeId}`
+    })
+  };
+}

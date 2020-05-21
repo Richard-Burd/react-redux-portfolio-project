@@ -47,6 +47,13 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: false
       }
 
+    case 'EDIT_AIRFRAME':
+      return {
+        ...state,
+        singleAirframe: action.singleAirframe,
+        loading: false
+      }
+
     default:
       return state;
   }

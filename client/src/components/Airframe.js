@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'
-import BasicForm from './BasicForm'
 
 function Airframe (props) {
+
+  const [number] = useState(props.match.params.airframeId);
 
   const handleClick = () => {
     props.fetchAirframe(number)
@@ -28,7 +30,6 @@ function Airframe (props) {
     )
   }
 
-  const [number] = useState(props.match.params.airframeId);
   return (
     <div>
       <div>UAV System Name: {props.location.state.name}</div>
@@ -36,10 +37,9 @@ function Airframe (props) {
       <div>
         {props.airframeData.singleAirframe.id !== parseInt(number)
         ?
-      <div>
-        <button onClick={handleClick}>Get Basic Airframe Parameters</button>
-        <button onClick={deleteClick}>Delete this airframe</button>
-      </div> : null }
+        <div>
+          <button onClick={handleClick}>Get Basic Airframe Parameters</button>
+        </div> : null }
       </div>
 
       {/* If the airframe in store is the correct one, show it, and if not, don't */}
@@ -48,6 +48,16 @@ function Airframe (props) {
         ?
         showAirframe() : null }
       </div>
+
+      <button onClick={deleteClick}>Delete this airframe</button>
+      <Link key={number} to={{
+        pathname: `/airframes/${number}/edit`,
+        state: {
+          name: props.location.state.name
+        }
+      }}>
+          <h2>Edit this Airframe</h2>
+      </Link>
     </div>
   )
 }

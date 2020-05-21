@@ -5,7 +5,20 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) put an "Edit" button on the Airframe.js page that takes you to:
+1.) clean up the Action & reducer & make sure the DELETE function only does what it needs to
+    and doesn't contain un-necessary code
+
+2.) make the BasicForm such that when you see it, it's values are already filled in with
+    the existing parameter information.
+
+3.) get the EDIT action in BasicForm working
+
+4.) delete any redundant matchDispatchToProps that you might have in the EditAirframe container
+
+
+
+//////////////////////////
+5.) on the EditAirframe page that takes you to:
     localhost3000/airframes/1/edit <= there you will have four buttons:
     a.) edit basic params
     b.) edit attitude params
@@ -86,6 +99,7 @@ x.) The next step is to get a page to render that shows a list of existing airfr
 
 x.) put a delete button on Airframe.js and get the
 
+x.) put an "Edit" button on the Airframe.js
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

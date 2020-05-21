@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { updateAirframe } from '../redux'
 
 class BasicForm extends Component {
   constructor(props) {
@@ -90,4 +91,13 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(BasicForm)
+const mapDispatchToProps = dispatch => {
+  return {
+    updateAirframe: (number) => dispatch(updateAirframe(number)),
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BasicForm)
