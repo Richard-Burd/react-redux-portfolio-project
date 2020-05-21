@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'
+import EditAirframe from './EditAirframe'
 
 function Airframe (props) {
 
@@ -26,6 +26,7 @@ function Airframe (props) {
         <div>Weight: {props.airframeData.singleAirframe.weight} lbs</div>
         <div>Configuration: {props.airframeData.singleAirframe.config}</div>
         <img src={props.airframeData.singleAirframe.image} alt="plane" />
+        <EditAirframe />
       </div>
     )
   }
@@ -50,14 +51,6 @@ function Airframe (props) {
       </div>
 
       <button onClick={deleteClick}>Delete this airframe</button>
-      <Link key={number} to={{
-        pathname: `/airframes/${number}/edit`,
-        state: {
-          name: props.location.state.name
-        }
-      }}>
-          <h2>Edit this Airframe</h2>
-      </Link>
     </div>
   )
 }

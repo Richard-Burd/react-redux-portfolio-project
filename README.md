@@ -5,8 +5,7 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) clean up the Action & reducer & make sure the DELETE function only does what it needs to
-    and doesn't contain un-necessary code
+1.) either pass props to child components or make sure the page refetches any props needed.
 
 2.) make the BasicForm such that when you see it, it's values are already filled in with
     the existing parameter information.
@@ -100,6 +99,9 @@ x.) The next step is to get a page to render that shows a list of existing airfr
 x.) put a delete button on Airframe.js and get the
 
 x.) put an "Edit" button on the Airframe.js
+
+x.) clean up the Action & reducer & make sure the DELETE function only does what it needs to
+    and doesn't contain un-necessary code
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

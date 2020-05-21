@@ -11,7 +11,7 @@ export const fetchAirframes = () => {
 
 export function fetchAirframe(airframeId) {
   return (dispatch) => {
-    dispatch({ type: 'START_ADDING_AIRFRAME_REQUEST'}) // so far, the code crashes below and cannot read: airframeId
+    dispatch({ type: 'START_ADDING_AIRFRAME_REQUEST'})
     fetch(`http://localhost:3001/airframes/${airframeId}`).then(response => {
       return response.json()
     }).then(responseJSON => {
@@ -22,7 +22,6 @@ export function fetchAirframe(airframeId) {
 
 export function deleteAirframe(airframeId) {
   return (dispatch) => {
-    dispatch({ type: 'START_DELETING_AIRFRAME'}) // so far, the code crashes below and cannot read: airframeId
     fetch(`http://localhost:3001/airframes/${airframeId}`, {
       method: 'DELETE',
       headers: {
@@ -37,8 +36,9 @@ export function deleteAirframe(airframeId) {
 }
 
 export function updateAirframe(airframeId) {
+  console.log('entered updateAirframe action');
   return (dispatch) => {
-    dispatch({ type: 'UPDATE_AIRFRAME'}) // so far, the code crashes below and cannot read: airframeId
+    dispatch({ type: 'EDIT_AIRFRAME'})
     fetch(`http://localhost:3001/airframes/${airframeId}`, {
       method: 'PATCH',
       headers: {
@@ -47,7 +47,7 @@ export function updateAirframe(airframeId) {
       }
     })
     .then(response => {
-      document.location.href = `http://localhost:3001/airframes/${airframeId}`
+      document.location.href = `http://localhost:3000/airframes`
     })
   };
 }
