@@ -7,10 +7,11 @@ class EditAirframe extends Component {
     super(props)
 
     this.state = {
-      formName: this.props.airframeData.name,
-      formWeight: this.props.airframeData.weight,
-      formConfig: this.props.airframeData.config,
-      formImageURL: this.props.airframeData.image
+      formId: this.props.id,
+      formName: this.props.name,
+      formWeight: this.props.weight,
+      formConfig: this.props.config,
+      formImageURL: this.props.image
     }
   }
 
@@ -41,12 +42,12 @@ class EditAirframe extends Component {
   handleSubmit = (event) => {
     //console.log(this.props.airframeData.singleAirframe.id);
 
-    this.props.updateAirframe(this.props.airframeData.id)
+    this.props.updateAirframe(this.state)
     event.preventDefault()
   }
 
   render() {
-console.log(this.state);
+    console.log(this.state);
     return (
       <div style={{ backgroundColor: '#bfeec4' }}>
         <h2>Edit this Airframe's basic info</h2>
@@ -92,15 +93,20 @@ console.log(this.state);
 
 const mapStateToProps = state => {
   return {
-    airframeData: state.airframe.singleAirframe
+    props: state.airframe.singleAirframe
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateAirframe: (number) => dispatch(updateAirframe(number)),
+    updateAirframe: (props) => dispatch(updateAirframe(props)),
   }
 }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     updateAirframe: (number) => dispatch(updateAirframe(number)),
+//   }
+// }
 
 export default connect(
   mapStateToProps,

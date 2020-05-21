@@ -35,10 +35,35 @@ export function deleteAirframe(airframeId) {
   };
 }
 
-export function updateAirframe(airframeId) {
-  console.log('entered updateAirframe action');
+
+export function updateAirframe(airframe) {
+  console.log(`entered updateAirframe action with airframe ID: ${airframe.formId}`);
+  console.log(airframe)
   return (dispatch) => {
-    dispatch({ type: 'EDIT_AIRFRAME'})
+    // dispatch({ type: 'EDIT_AIRFRAME', payload: airframe })
+    fetch(`http://localhost:3001/airframes/${airframe.formId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        "java_script_name": airframe.formName,
+        "java_script_weight": airframe.formWeight,
+        "java_script_config": airframe.formConfig,
+        "java_script_image": airframe.formImageURL
+      })
+    })
+    //.then(response => {
+    //  document.location.href = `http://localhost:3000/airframes`
+    //})
+  };
+}
+/*
+export function updateAirframe(airframeId) {
+  console.log(`entered updateAirframe action with airframe ID: ${airframeId}`);
+  return (dispatch) => {
+    dispatch({ type: 'EDIT_AIRFRAME' })
     fetch(`http://localhost:3001/airframes/${airframeId}`, {
       method: 'PATCH',
       headers: {
@@ -46,8 +71,9 @@ export function updateAirframe(airframeId) {
         Accept: "application/json"
       }
     })
-    .then(response => {
-      document.location.href = `http://localhost:3000/airframes`
-    })
+    //.then(response => {
+    //  document.location.href = `http://localhost:3000/airframes`
+    //})
   };
 }
+*/

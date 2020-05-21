@@ -33,13 +33,14 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: false
       }
 
-    case 'EDIT_AIRFRAME':
-    console.log('entered EDIT_AIRFRAME');
-       return {
-         //...state,
-         //singleAirframe: action.singleAirframe,
-         //loading: false
-       }
+    //case 'EDIT_AIRFRAME':
+    //  console.log('entered EDIT_AIRFRAME');
+    //  console.log(action);
+    //  return {
+    //    ...state,
+    //    airframe: action.payload,
+    //    loading: false
+    //  }
 
     default:
       return state;

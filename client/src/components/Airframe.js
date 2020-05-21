@@ -26,7 +26,13 @@ function Airframe (props) {
         <div>Weight: {props.airframeData.singleAirframe.weight} lbs</div>
         <div>Configuration: {props.airframeData.singleAirframe.config}</div>
         <img src={props.airframeData.singleAirframe.image} alt="plane" />
-        <EditAirframe />
+        <EditAirframe
+          id={props.airframeData.singleAirframe.id}
+          name={props.airframeData.singleAirframe.name}
+          weight={props.airframeData.singleAirframe.weight}
+          config={props.airframeData.singleAirframe.config}
+          image={props.airframeData.singleAirframe.image} 
+        />
       </div>
     )
   }
