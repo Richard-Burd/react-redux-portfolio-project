@@ -11,16 +11,11 @@ class AirframeForm extends Component {
       // this decides whether you run createAirframe() or updateAirframe()
       formpurpose: this.props.formAction,
 
-      // These are not refactored so you (the React learner onboarding this code)
-      // can trace these to the Redux action controllers & see how it all works...
       formId: this.props.id,
       formName: this.props.name,
-
-      // ...the remaining params are refactored so they can be expanded later on:
-      // https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
-      weight: this.props.weight,
-      config: this.props.config,
-      image: this.props.image
+      formWeight: this.props.weight,
+      formConfig: this.props.config,
+      formImageURL: this.props.image
     }
   }
 
@@ -30,29 +25,21 @@ class AirframeForm extends Component {
     })
   }
 
-  handleAnyEventChange = (event) => {
-    const value = event.target.value;
-    this.setState({
-      ...this.state,
-      [event.target.value]: value
-    });
-  }
-
   handleWeightChange = (event) => {
     this.setState({
-      weight: event.target.value
+      formWeight: event.target.value
     })
   }
 
   handleConfigChange = (event) => {
     this.setState({
-      config: event.target.value
+      formConfig: event.target.value
     })
   }
 
   handleImageChange = (event) => {
     this.setState({
-      image: event.target.value
+      formImageURL: event.target.value
     })
   }
 
@@ -83,13 +70,13 @@ class AirframeForm extends Component {
           <label>Weight: </label>
             <input
               type="text"
-              value={this.state.weight}
+              value={this.state.formWeight}
               onChange={this.handleWeightChange}
             />
           </div>
           <div>
             <label>Configuration: </label>
-            <select value={this.state.config} onChange={this.handleConfigChange}>
+            <select value={this.state.formConfig} onChange={this.handleConfigChange}>
               <option value="Conventional Tail">Conventional Tail</option>
               <option value="Flying Wing">Flying Wing</option>
               <option value="Twin Boom">Twin Boom</option>
@@ -99,7 +86,7 @@ class AirframeForm extends Component {
             <label>Image URL: </label>
             <input
               type="text"
-              value={this.state.image}
+              value={this.state.formImageURL}
               onChange={this.handleImageChange}
             />
           </div>

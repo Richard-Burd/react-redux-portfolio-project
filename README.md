@@ -5,11 +5,13 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-2.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
+1.) Implement this functionality:
+    https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
+    ...on the AirframeForm.js component.
 
 3.) make the buttons functional components
 
-4.) make the <label> + <input> pairs a seperate, functional component
+4.) make the <label> + <input> pairs a separate, functional component
 
 
 
@@ -118,6 +120,10 @@ x.) get a single form working for both creating and updating
               if (state.singleAirframe == "undefined") {
                 createAirframe()
               } else { updateAirframe }
+x.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
+
+
+
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

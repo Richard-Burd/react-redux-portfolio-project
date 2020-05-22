@@ -30,10 +30,10 @@ function App() {
               render={(props) =>
                 <AirframeForm {...props}
                   formAction={"create"}
-                  name={"Bozo"}
-                  weight={5}
-                  config={"Flying Wing"}
-                  image={"imgur.com"}
+                  name={"F-14B "}
+                  weight={40100}
+                  config={"Conventional Tail"}
+                  image={"https://www.squadron.com/v/vspfiles/photos/TM61114-3.jpg"}
                 />
               }
             />

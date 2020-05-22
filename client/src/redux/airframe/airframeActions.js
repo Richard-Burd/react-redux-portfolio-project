@@ -44,17 +44,17 @@ export function deleteAirframe(airframeId) {
 
 export function updateAirframe(airframe) {
   return (dispatch) => {
-    fetch(`${AIRFRAMES_API_URL}/${airframe.formId}`, {
+    fetch(`${AIRFRAMES_API_URL}/${airframe.formId}`, { // "formId" is so-named for tracing
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
         Accept: "application/json"
       },
       body: JSON.stringify({
-        "java_script_name": airframe.formName,
-        "java_script_weight": airframe.formWeight,
-        "java_script_config": airframe.formConfig,
-        "java_script_image": airframe.formImageURL
+        "java_script_name": airframe.formName, // "formName" is so-named for tracing
+        "java_script_weight": airframe.weight,
+        "java_script_config": airframe.config,
+        "java_script_image": airframe.image
       })
     })
     .then(response => {
@@ -75,9 +75,9 @@ export function createAirframe(airframe) {
       },
       body: JSON.stringify({
         "java_script_name": airframe.formName,
-        "java_script_weight": airframe.formWeight,
-        "java_script_config": airframe.formConfig,
-        "java_script_image": airframe.formImageURL
+        "java_script_weight": airframe.weight,
+        "java_script_config": airframe.config,
+        "java_script_image": airframe.image
       })
     })
     .then(response => {
