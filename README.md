@@ -5,14 +5,12 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) either pass props to child components or make sure the page refetches any props needed.
+1.) make an option to create an airframe
+    a.) get a fetch statement working that adds an airframe first
+    b.) get a single form working for both creating and updating
 
-2.) make the BasicForm such that when you see it, it's values are already filled in with
-    the existing parameter information.
+2.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
 
-3.) get the EDIT action in BasicForm working
-
-4.) delete any redundant matchDispatchToProps that you might have in the EditAirframe container
 
 
 
@@ -102,6 +100,15 @@ x.) put an "Edit" button on the Airframe.js
 
 x.) clean up the Action & reducer & make sure the DELETE function only does what it needs to
     and doesn't contain un-necessary code
+
+x.) either pass props to child components or make sure the page refetches any props needed.
+
+x.) make the BasicForm such that when you see it, it's values are already filled in with
+        the existing parameter information.
+
+x.) get the EDIT action in BasicForm working
+
+x.) delete any redundant matchDispatchToProps that you might have in the EditAirframe container
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

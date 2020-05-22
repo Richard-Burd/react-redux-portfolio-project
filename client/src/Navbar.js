@@ -12,6 +12,9 @@ export default function Navbar() {
         <Link to="/">
           <li>Home</li>
         </Link>
+        <Link to="/new-airframe">
+          <li>New Airframe</li>
+        </Link>
       </ul>
     </nav>
   )

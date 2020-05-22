@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import AirframesContainer from './components/AirframesContainer'
 import Airframe from './components/Airframe'
+import EditAirframe from './components/EditAirframe'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import AirframesPage from './components/AirframesPage' // <= This isn't working right now
@@ -25,6 +26,7 @@ function App() {
           <Switch>
             <Route exact path='/airframes' render={routerProps => <AirframesContainer {...routerProps} />} />
             <Route exact path='/airframes/:airframeId' render={routerProps => <Airframe {...routerProps} />} />
+            <Route exact path='/new-airframe' render={routerProps => <EditAirframe {...routerProps} />} />
           </Switch>
         </div>
       </Provider>

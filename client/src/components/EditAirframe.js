@@ -50,7 +50,7 @@ class EditAirframe extends Component {
     console.log(this.state);
     return (
       <div style={{ backgroundColor: '#bfeec4' }}>
-        <h2>Edit this Airframe's basic info</h2>
+        <h2>Airframe Form</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Name: </label>
@@ -102,11 +102,6 @@ const mapDispatchToProps = dispatch => {
     updateAirframe: (props) => dispatch(updateAirframe(props)),
   }
 }
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     updateAirframe: (number) => dispatch(updateAirframe(number)),
-//   }
-// }
 
 export default connect(
   mapStateToProps,

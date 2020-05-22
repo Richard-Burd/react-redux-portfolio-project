@@ -54,8 +54,24 @@ export function updateAirframe(airframe) {
         "java_script_image": airframe.formImageURL
       })
     })
-    //.then(response => {
-    //  document.location.href = `http://localhost:3000/airframes`
+    .then(response => {
+      document.location.href = `http://localhost:3000/airframes`
+    })
+
+    //dispatch({
+    //  type: 'UPDATE_AIRFRAME',
+    //  payload: {
+    //    id: airframe.formId,
+    //    name: airframe.formName,
+    //    weight: airframe.formWeight,
+    //    config: airframe.formConfig,
+    //    image: airframe.formImageURL
+    //  }
+    //})
+
+
+    //.then(responseJSON => {
+    //  dispatch({ type: 'UPDATE_AIRFRAME', revisedAirframe: responseJSON })
     //})
   };
 }

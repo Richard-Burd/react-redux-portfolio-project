@@ -38,7 +38,7 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
     //  console.log(action);
     //  return {
     //    ...state,
-    //    airframe: action.payload,
+    //    singleAirframe: action.payload,
     //    loading: false
     //  }
 
