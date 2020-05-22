@@ -5,6 +5,8 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
+0.) S.thing's wrong with GitHub...resend another commit & see if that fixes anything
+
 1.) Implement this functionality:
     https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
     ...on the AirframeForm.js component.
