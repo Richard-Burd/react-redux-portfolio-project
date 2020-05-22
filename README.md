@@ -5,12 +5,11 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) make an option to create an airframe
-    a.) get a fetch statement working that adds an airframe first
-    b.) get a single form working for both creating and updating
-
 2.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
 
+3.) make the buttons functional components
+
+4.) make the <label> + <input> pairs a seperate, functional component
 
 
 
@@ -109,6 +108,16 @@ x.) make the BasicForm such that when you see it, it's values are already filled
 x.) get the EDIT action in BasicForm working
 
 x.) delete any redundant matchDispatchToProps that you might have in the EditAirframe container
+
+x.) make an option to create an airframe...
+
+x.) get a single form working for both creating and updating
+    a.) compare "EditAirframe.js" & "CreateAirframe.js" side by side to see where they differ
+    b.) combine them somehow into a sigle form.
+        i.) s.thing like...
+              if (state.singleAirframe == "undefined") {
+                createAirframe()
+              } else { updateAirframe }
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
 Instructions are here:

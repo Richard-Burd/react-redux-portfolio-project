@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'
-import EditAirframe from './EditAirframe'
+import AirframeForm from './AirframeForm'
 
 function Airframe (props) {
 
@@ -26,12 +26,13 @@ function Airframe (props) {
         <div>Weight: {props.airframeData.singleAirframe.weight} lbs</div>
         <div>Configuration: {props.airframeData.singleAirframe.config}</div>
         <img src={props.airframeData.singleAirframe.image} alt="plane" />
-        <EditAirframe
+        <AirframeForm
+          formAction={"update"}
           id={props.airframeData.singleAirframe.id}
           name={props.airframeData.singleAirframe.name}
           weight={props.airframeData.singleAirframe.weight}
           config={props.airframeData.singleAirframe.config}
-          image={props.airframeData.singleAirframe.image} 
+          image={props.airframeData.singleAirframe.image}
         />
       </div>
     )

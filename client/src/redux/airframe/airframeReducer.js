@@ -1,7 +1,7 @@
 const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, action) => {
   switch (action.type) {
 
-    // multiple airframes
+    // load multiple airframes from the Rails API
     case 'START_ADDING_AIRFRAMES_REQUEST':
       return {
         ...state,
@@ -9,7 +9,7 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: true
       }
 
-    // multiple airframes
+    // import multiple airframes from the Rails API
     case 'ADD_AIRFRAMES':
       return {
         ...state,
@@ -17,7 +17,7 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: false
       }
 
-    // single airframe
+    // load a single airframe from the Rails API
     case 'START_ADDING_AIRFRAME_REQUEST':
       return {
         ...state,
@@ -25,22 +25,13 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
         loading: true
       }
 
-    // single airframe
+    // import a single airframe from the Rails API
     case 'ADD_AIRFRAME':
       return {
         ...state,
         singleAirframe: action.singleAirframe,
         loading: false
       }
-
-    //case 'EDIT_AIRFRAME':
-    //  console.log('entered EDIT_AIRFRAME');
-    //  console.log(action);
-    //  return {
-    //    ...state,
-    //    singleAirframe: action.payload,
-    //    loading: false
-    //  }
 
     default:
       return state;
