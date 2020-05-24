@@ -1,7 +1,4 @@
-const BASE_API_URL = "http://localhost:3001"
-const AIRFRAMES_API_URL = `${BASE_API_URL}/airframes`
-const BASE_APP_URL = "http://localhost:3000"
-const AIRFRAMES_APP_URL = `${BASE_APP_URL}/airframes`
+import { AIRFRAMES_API_URL, AIRFRAMES_APP_URL } from '../urlAndUrns'
 
 export const fetchAirframes = () => {
   return (dispatch) => { // fetch requests return a function that can have side effects

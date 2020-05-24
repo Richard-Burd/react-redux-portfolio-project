@@ -21,7 +21,11 @@ class AirframesController < ApplicationController
       config: params[:java_script_config],
       image: params[:java_script_image]
     }
-      Airframe.create(airframeData)
+    new_airframe = Airframe.create(airframeData)
+    new_attitude = Attitude.create(airframe_id: new_airframe.id)
+    new_pid = Pid.create(airframe_id: new_airframe.id)
+    new_plugin = Plugin.create(airframe_id: new_airframe.id)
+
   end
 
   # If the value is not included in airframeData, the value gets updated to null

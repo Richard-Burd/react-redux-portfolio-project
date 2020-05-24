@@ -5,11 +5,26 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-0.) S.thing's wrong with GitHub...resend another commit & see if that fixes anything
+1.) make the attitude update action in the Attitudes controller functional.
 
-1.) Implement this functionality:
+2.) get the attitude 'show' & 'update' fetches working.  You don't need destroy or index
+    a.) fetchAttitude(airframeId)
+    b.) updateAttitude(airframeId)
+
+3.) Have the browser-router display attitude params like this:
+    http://localhost:3000/airframes/4/params/attitude
+    ...NOTE: you will reference the airframe ID, not any of the param id's
+    ...this means you match everything to a parameter's "airframe_id" associated with it.
+
+3.) get the attitude form to display properly
+
+2.) setup the BrowserRouter so that you can link to the airframe's commensurate  
+    parameter page:
+
+
+3.) Create an attitude parameter page that mimics this as close as possible:
     https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
-    ...on the AirframeForm.js component.
+    ...on the AttitudeForm.js component.
 
 3.) make the buttons functional components
 
@@ -124,7 +139,8 @@ x.) get a single form working for both creating and updating
               } else { updateAirframe }
 x.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
 
-
+x.) setup the backend so that when you create a new airframe, you also create it's
+    attitude, PID, and plugins parameters set to null.
 
 
 ## Instructions for Setting up Backend API for Final Portfolio Project

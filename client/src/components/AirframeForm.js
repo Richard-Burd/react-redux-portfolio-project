@@ -20,7 +20,7 @@ class AirframeForm extends Component {
       // https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
       weight: this.props.weight,
       config: this.props.config,
-      image: this.props.image
+      image: this.props.image,
     }
   }
 
@@ -34,26 +34,8 @@ class AirframeForm extends Component {
     const value = event.target.value;
     this.setState({
       ...this.state,
-      [event.target.value]: value
+      [event.target.name]: value
     });
-  }
-
-  handleWeightChange = (event) => {
-    this.setState({
-      weight: event.target.value
-    })
-  }
-
-  handleConfigChange = (event) => {
-    this.setState({
-      config: event.target.value
-    })
-  }
-
-  handleImageChange = (event) => {
-    this.setState({
-      image: event.target.value
-    })
   }
 
   handleSubmit = (event) => {
@@ -66,9 +48,11 @@ class AirframeForm extends Component {
   }
 
   render() {
-    // console.log(this.state);
     return (
       <div style={{ backgroundColor: '#bfeec4' }}>
+        {/* NOTE: these inputs are not refactored so you (the React learner */}
+        {/* onboarding this code) can see what the code looks like with one less */}
+        {/* layer of abstraction. */}
         <h2>Airframe Form</h2>
         <form onSubmit={this.handleSubmit}>
           <div>
@@ -83,13 +67,14 @@ class AirframeForm extends Component {
           <label>Weight: </label>
             <input
               type="text"
+              name="weight"
               value={this.state.weight}
-              onChange={this.handleWeightChange}
+              onChange={this.handleAnyEventChange}
             />
           </div>
           <div>
             <label>Configuration: </label>
-            <select value={this.state.config} onChange={this.handleConfigChange}>
+            <select value={this.state.config} name="config" onChange={this.handleAnyEventChange}>
               <option value="Conventional Tail">Conventional Tail</option>
               <option value="Flying Wing">Flying Wing</option>
               <option value="Twin Boom">Twin Boom</option>
@@ -99,8 +84,9 @@ class AirframeForm extends Component {
             <label>Image URL: </label>
             <input
               type="text"
+              name="image"
               value={this.state.image}
-              onChange={this.handleImageChange}
+              onChange={this.handleAnyEventChange}
             />
           </div>
           <button type="submit">Submit</button>
@@ -110,18 +96,13 @@ class AirframeForm extends Component {
   }
 }
 
-// export default CreateAirframe
-
 const mapStateToProps = state => {
-  // console.log('entered mapStateToProps');
-  // console.log(state);
   return {
     props: state.airframe.singleAirframe
   }
 }
 
 const mapDispatchToProps = dispatch => {
-  // console.log('entered mapDispatchToProps');
   return {
     updateAirframe: (props) => dispatch(updateAirframe(props)),
     createAirframe: (props) => dispatch(createAirframe(props)),

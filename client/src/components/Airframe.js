@@ -7,7 +7,7 @@ function Airframe (props) {
 
   const [number] = useState(props.match.params.airframeId);
 
-  const handleClick = () => {
+  const handleBasicInfoClick = () => {
     props.fetchAirframe(number)
   }
 
@@ -33,7 +33,11 @@ function Airframe (props) {
         {props.airframeData.singleAirframe.id !== parseInt(number)
         ?
         <div>
-          <button onClick={handleClick}>Get Basic Airframe Parameters</button>
+          <button onClick={handleBasicInfoClick}>Get Basic Airframe Information</button>
+
+          <button>Edit this airframe's attitude params</button>
+          <button>Edit this airframe's PID params</button>
+          <button>Edit this airframe's plugins params</button>
         </div> : null }
       </div>
 
