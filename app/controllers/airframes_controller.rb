@@ -25,7 +25,6 @@ class AirframesController < ApplicationController
     new_attitude = Attitude.create(airframe_id: new_airframe.id)
     new_pid = Pid.create(airframe_id: new_airframe.id)
     new_plugin = Plugin.create(airframe_id: new_airframe.id)
-
   end
 
   # If the value is not included in airframeData, the value gets updated to null

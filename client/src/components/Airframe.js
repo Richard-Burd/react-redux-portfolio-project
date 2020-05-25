@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'
 import AirframeData from './AirframeData'
+import { Link } from 'react-router-dom';
 
 function Airframe (props) {
 
@@ -34,10 +35,6 @@ function Airframe (props) {
         ?
         <div>
           <button onClick={handleBasicInfoClick}>Get Basic Airframe Information</button>
-
-          <button>Edit this airframe's attitude params</button>
-          <button>Edit this airframe's PID params</button>
-          <button>Edit this airframe's plugins params</button>
         </div> : null }
       </div>
 
@@ -47,7 +44,12 @@ function Airframe (props) {
         ?
         showAirframe() : null }
       </div>
-
+      <Link key={window.location.pathname} to={{
+        pathname: `${window.location.pathname}/attitude-params`,}}>
+        <button>Edit this airframe's attitude params</button>
+      </Link>
+      <button>Edit this airframe's PID params</button>
+      <button>Edit this airframe's plugins params</button>
       <button onClick={deleteClick}>Delete this airframe</button>
     </div>
   )
