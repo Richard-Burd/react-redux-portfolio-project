@@ -5,7 +5,7 @@ class PidsController < ApplicationController
   end
 
   def show
-    pid = Pid.find_by(id: params[:id])
+    pid = Pid.find_by(airframe_id: params[:id])
     render json: pid
   end
 end

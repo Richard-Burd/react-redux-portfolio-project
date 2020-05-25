@@ -5,7 +5,7 @@ import store from './redux/store'
 import AirframesContainer from './components/AirframesContainer'
 import Airframe from './components/Airframe'
 import AirframeForm from './components/AirframeForm'
-import AttitudeForm from './components/AttitudeForm'
+import ParametersContainer from './components/ParametersContainer'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import AirframesPage from './components/AirframesPage' // <= This isn't working right now
@@ -38,7 +38,7 @@ function App() {
                 />
               }
             />
-            <Route exact path='/airframes/:airframeId/attitude-params' render={routerProps => <AttitudeForm {...routerProps} />} />
+            <Route exact path='/airframes/:airframeId/params' render={routerProps => <ParametersContainer {...routerProps} />} />
           </Switch>
         </div>
       </Provider>

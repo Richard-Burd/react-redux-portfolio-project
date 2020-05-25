@@ -45,11 +45,9 @@ function Airframe (props) {
         showAirframe() : null }
       </div>
       <Link key={window.location.pathname} to={{
-        pathname: `${window.location.pathname}/attitude-params`,}}>
-        <button>Edit this airframe's attitude params</button>
+        pathname: `${window.location.pathname}/params`,}}>
+        <button>Edit this airframe's parameters</button>
       </Link>
-      <button>Edit this airframe's PID params</button>
-      <button>Edit this airframe's plugins params</button>
       <button onClick={deleteClick}>Delete this airframe</button>
     </div>
   )

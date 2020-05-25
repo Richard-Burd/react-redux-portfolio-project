@@ -5,11 +5,18 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) make the attitude update action in the Attitudes controller functional.
+1.) figure out a way to iterate over each parameter value in attitude params and
+    produce both an <input> field and a <label> for each one.
 
-2.) get the attitude 'show' & 'update' fetches working.  You don't need destroy or index
-    a.) fetchAttitude(airframeId)
-    b.) updateAttitude(airframeId)
+
+
+
+
+
+
+
+
+
 
 3.) Have the browser-router display attitude params like this:
     http://localhost:3000/airframes/4/params/attitude
@@ -141,6 +148,12 @@ x.) make the "const showAirframe = () => {}" in "Airframe.js" a separate compone
 
 x.) setup the backend so that when you create a new airframe, you also create it's
     attitude, PID, and plugins parameters set to null.
+
+x.) make the attitude update action in the Attitudes controller functional.
+
+x.) get the attitude 'show' & 'update' fetches working.  You don't need destroy or index
+    a.) fetchAttitude(airframeId)
+    b.) updateAttitude(airframeId)
 
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
