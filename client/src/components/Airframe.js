@@ -34,7 +34,7 @@ function Airframe (props) {
         {props.airframeData.singleAirframe.id !== parseInt(number)
         ?
         <div>
-          <button onClick={handleBasicInfoClick}>Get Basic Airframe Information</button>
+          <button onClick={handleBasicInfoClick}>View or Edit Basic Airframe Information</button>
         </div> : null }
       </div>
 

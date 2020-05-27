@@ -16,8 +16,10 @@ export function fetchAttitude(airframeId) {
 }
 
 export function updateAttitude(attitude) {
+  console.log('well I got inside the updateAttitude action');
+
   return (dispatch) => {
-    fetch(`${ATTITUDES_API_URL}/${attitude}`, {
+    fetch(`${ATTITUDES_API_URL}/${attitude.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -26,11 +28,11 @@ export function updateAttitude(attitude) {
       body: JSON.stringify({
         "java_script_lim_roll_cd": attitude.lim_roll_cd,
         "java_script_lim_pitch_max": attitude.lim_pitch_max,
-        "java_script_lim_pitch_min": attitude.lim_pitch_min
+        "java_script_lim_pitch_min": attitude.lim_pitch_min,
       })
     })
     .then(response => {
-      document.location.href = AIRFRAMES_APP_URL
+      document.location.href = `${AIRFRAMES_APP_URL}`
     })
   };
 }

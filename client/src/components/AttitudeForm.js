@@ -7,22 +7,29 @@ class AttitudeForm extends Component {
     super(props)
 
     this.state = {
+      id: this.props.info.id,
       lim_roll_cd: this.props.info.lim_roll_cd,
       lim_pitch_max: this.props.info.lim_pitch_max,
       lim_pitch_min: this.props.info.lim_pitch_min
     }
   }
 
-  handleAnyEventChange = (event) => {
-    const value = event.target.value;
+  handleRollChange = (event) => {
     this.setState({
-      ...this.state,
-      [event.target.name]: value
-    });
+      lim_roll_cd: event.target.value
+    })
+  }
+
+  increaseMaxPitch = (event) => {
+    console.log("we're trying to add max pitch here!");
+    this.setState({
+      lim_pitch_max: this.state.lim_pitch_max + 1
+    })
   }
 
   handleSubmit = (event) => {
     this.props.updateAttitude(this.state)
+    console.log(this.state);
     event.preventDefault()
   }
 
@@ -32,7 +39,21 @@ class AttitudeForm extends Component {
     return (
       <div>
         <div>Attitude Component Form</div>
-        <div>{this.state.lim_roll_cd}</div>
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label>lim_roll_cd (max angle of roll): </label>
+            <input
+              type="text"
+              value={this.state.lim_roll_cd}
+              onChange={this.handleRollChange}
+            />
+          </div>
+          <div>
+            <h2>Maximum Pitch: {this.state.lim_pitch_max}°</h2>
+            <button type="button" onClick={this.increaseMaxPitch}>add pitch</button>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
       </div>
     )
   }
@@ -40,7 +61,7 @@ class AttitudeForm extends Component {
 
 const mapStateToProps = state => {
   return {
-    props: state.attitude
+    props: state.attitude.singleAttitude
   }
 }
 

@@ -35,7 +35,6 @@ const ParametersContainer = (props) => {
       <div>
         <h2>This is the Parameters container for &nbsp;
 
-
         <Link key={window.location.pathname} to={{
           pathname: `/airframes/${number}`,
           state: {
