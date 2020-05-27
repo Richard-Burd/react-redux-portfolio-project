@@ -12,7 +12,12 @@ import { updateAttitude } from '../redux'
 const RenderChildren = (props) => { // <= this needs to be a class component
 
   // https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
-  const [name, setName] = useState({firstName: props.data})
+  const [value, setValue] = useState({selection: " "})
+
+  const handleInputChange = e => {
+    const {selection, singleValue} = e.target
+    setValue({...value, [selection]: singleValue})
+  }
 
   const children = []
 
@@ -20,15 +25,14 @@ const RenderChildren = (props) => { // <= this needs to be a class component
     //console.log(`We've got a key of: ${key} and a value of: ${props.data[key]}`);
     //console.log(Object.keys(props.data).length);
     children.push(
-      React.createElement('div', {key: children.length ,id: "container"}, // key is the unique key
-        React.createElement('label', {id: "label"}, key),
-        React.createElement('input', {
-          type: "text",
-          value: name.firstName[key],
-          placeholder: props.data[key],
-          onChange: e => {setName({ ...name, firstName: e.target.value})}
-        })
-      )
+      <div key={children.length}>
+        <label>{key}</label>
+        <input
+          type="text"
+          value={value.selection[key]}
+          onChange={handleInputChange}
+        />
+      </div>
     )
 
   }

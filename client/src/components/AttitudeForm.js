@@ -7,28 +7,45 @@ class AttitudeForm extends Component {
     super(props)
 
     this.state = {
-
+      lim_roll_cd: this.props.info.lim_roll_cd,
+      lim_pitch_max: this.props.info.lim_pitch_max,
+      lim_pitch_min: this.props.info.lim_pitch_min
     }
   }
 
+  handleAnyEventChange = (event) => {
+    const value = event.target.value;
+    this.setState({
+      ...this.state,
+      [event.target.name]: value
+    });
+  }
+
+  handleSubmit = (event) => {
+    this.props.updateAttitude(this.state)
+    event.preventDefault()
+  }
+
   render() {
+    console.log('here are my props');
     console.log(this.props);
     return (
-      <div>Attitude Component Form</div>
+      <div>
+        <div>Attitude Component Form</div>
+        <div>{this.state.lim_roll_cd}</div>
+      </div>
     )
   }
 }
 
 const mapStateToProps = state => {
   return {
-    // add in the pid and plugin settings here
     props: state.attitude
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    // add in the pid and plugin settings here
     updateAttitude: (props) => dispatch(updateAttitude(props))
   }
 }
