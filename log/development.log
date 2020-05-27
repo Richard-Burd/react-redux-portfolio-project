@@ -43324,3 +43324,718 @@ Processing by AirframesController#show as */*
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 720)
 
 
+Started GET "/airframes" for ::1 at 2020-05-27 13:01:36 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 6820)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:01:40 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 6099)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:02:34 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:05:06 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 13:10:28 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:10:32 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:14:02 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:23:33 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.2ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 710)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:24:01 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:26:43 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:36:28 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 712)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:40:48 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:41:26 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 707)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:41:39 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:41:44 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:41:51 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:43:17 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:44:57 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:45:39 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:47:45 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:47:58 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:50:36 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:50:52 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:51:01 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:51:40 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.2ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:52:05 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:53:10 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:53:20 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:53:36 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 13:54:10 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 1109)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-27 13:54:15 -0700
+Processing by AirframesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:13:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 855)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:54:20 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 13:54:29 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>5, "java_script_lim_pitch_max"=>24, "java_script_lim_pitch_min"=>7, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.6ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_pitch_max" = ? WHERE "attitudes"."id" = ?[0m  [["lim_pitch_max", 24], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 2.6ms | Allocations: 12513)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 13:54:29 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:54:33 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:56:30 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 13:57:43 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:20:02 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 711)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:20:33 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:21:17 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:21:27 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:24:36 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:25:03 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:27:03 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:27:13 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:28:36 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.2ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:29:07 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:29:15 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>5, "java_script_lim_pitch_max"=>25, "java_script_lim_pitch_min"=>7, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.2ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.2ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_pitch_max" = ? WHERE "attitudes"."id" = ?[0m  [["lim_pitch_max", 25], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 1.5ms | Allocations: 4704)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:29:15 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1106)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-27 14:29:17 -0700
+Processing by AirframesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:13:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 720)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:29:23 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:33:22 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>5, "java_script_lim_pitch_max"=>21, "java_script_lim_pitch_min"=>7, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.2ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.4ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_pitch_max" = ? WHERE "attitudes"."id" = ?[0m  [["lim_pitch_max", 21], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 2.4ms | Allocations: 5518)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:33:23 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:33:30 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:37:51 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:38:55 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:39:04 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>22, "java_script_lim_pitch_max"=>21, "java_script_lim_pitch_min"=>7, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.2ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_roll_cd" = ? WHERE "attitudes"."id" = ?[0m  [["lim_roll_cd", 22], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 1.6ms | Allocations: 5523)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:39:04 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:39:09 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:45:18 -0700
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 711)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:45:53 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:46:38 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:48:00 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:48:50 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>5, "java_script_lim_pitch_max"=>8, "java_script_lim_pitch_min"=>7, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.6ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_roll_cd" = ?, "lim_pitch_max" = ? WHERE "attitudes"."id" = ?[0m  [["lim_roll_cd", 5], ["lim_pitch_max", 8], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 2.1ms | Allocations: 5546)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:48:50 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1106)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:48:54 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:49:43 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:50:48 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:51:06 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>5, "java_script_lim_pitch_max"=>8, "java_script_lim_pitch_min"=>-18, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.1ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_pitch_min" = ? WHERE "attitudes"."id" = ?[0m  [["lim_pitch_min", -18], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 1.8ms | Allocations: 5525)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:51:06 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:51:11 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:52:02 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:52:20 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>27, "java_script_lim_pitch_max"=>22, "java_script_lim_pitch_min"=>-12, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (0.8ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_roll_cd" = ?, "lim_pitch_max" = ?, "lim_pitch_min" = ? WHERE "attitudes"."id" = ?[0m  [["lim_roll_cd", 27], ["lim_pitch_max", 22], ["lim_pitch_min", -12], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 2.1ms | Allocations: 5540)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:52:21 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1098)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-27 14:52:23 -0700
+Processing by AirframesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:13:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 720)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:52:30 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:54:35 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:54:48 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 694)
+
+
+Started PATCH "/attitudes/1" for ::1 at 2020-05-27 14:55:02 -0700
+Processing by AttitudesController#update as JSON
+  Parameters: {"java_script_lim_roll_cd"=>42, "java_script_lim_pitch_max"=>22, "java_script_lim_pitch_min"=>-12, "id"=>"1", "attitude"=>{}}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:15:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAirframe Load (0.0ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[36mAttitude Update (1.1ms)[0m  [1m[33mUPDATE "attitudes" SET "lim_roll_cd" = ? WHERE "attitudes"."id" = ?[0m  [["lim_roll_cd", 42], ["id", 1]]
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/attitudes_controller.rb:21:in `update'
+No template found for AttitudesController#update, rendering head :no_content
+Completed 204 No Content in 9ms (ActiveRecord: 2.6ms | Allocations: 5520)
+
+
+Started GET "/airframes" for ::1 at 2020-05-27 14:55:02 -0700
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.1ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1097)
+
+
+Started GET "/attitudes/1" for ::1 at 2020-05-27 14:55:05 -0700
+Processing by AttitudesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAttitude Load (0.1ms)[0m  [1m[34mSELECT "attitudes".* FROM "attitudes" WHERE "attitudes"."airframe_id" = ? LIMIT ?[0m  [["airframe_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/attitudes_controller.rb:8:in `show'
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 695)
+
+

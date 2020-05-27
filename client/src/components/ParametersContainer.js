@@ -11,6 +11,7 @@ const ParametersContainer = (props) => {
       props.fetchAttitude(index)
     } else {
       console.log("That button isn't setup yet")
+      alert("Sorry, only attitude params are available in v0.1")
     }
   }
 
