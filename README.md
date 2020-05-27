@@ -5,33 +5,26 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) figure out a way to iterate over each parameter value in attitude params and
-    produce both an <input> field and a <label> for each one.
+1.) review project requirements & see if you meet each one.
+    a.) need 2 container components
+        1.) AirframeForm.js
+        2.) AirframesContainer.js  ---------- ???
+        3.) AttitudeForm.js
 
+    b.) need 5 stateless components
+        1.) Airframe.js
+        2.) ParametersContainer.js
+        3.) AirframeData.js
+        4.) Navbar.js
+        5.) App.js
+        6.) --------------buttons ?????
+        7.) --------------images ??????
 
+2.) look at putting the actions for attitude change in the Redux Action & Controllers
 
+3.) Rename TestComponent to TestContainer
 
-
-
-
-
-
-
-
-3.) Have the browser-router display attitude params like this:
-    http://localhost:3000/airframes/4/params/attitude
-    ...NOTE: you will reference the airframe ID, not any of the param id's
-    ...this means you match everything to a parameter's "airframe_id" associated with it.
-
-3.) get the attitude form to display properly
-
-2.) setup the BrowserRouter so that you can link to the airframe's commensurate  
-    parameter page:
-
-
-3.) Create an attitude parameter page that mimics this as close as possible:
-    https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
-    ...on the AttitudeForm.js component.
+4.) Get the astronauts out of the state entirely
 
 3.) make the buttons functional components
 
@@ -154,6 +147,22 @@ x.) make the attitude update action in the Attitudes controller functional.
 x.) get the attitude 'show' & 'update' fetches working.  You don't need destroy or index
     a.) fetchAttitude(airframeId)
     b.) updateAttitude(airframeId)
+
+x.) Have the browser-router display attitude params like this:
+    http://localhost:3000/airframes/4/params/attitude
+    ...NOTE: you will reference the airframe ID, not any of the param id's
+    ...this means you match everything to a parameter's "airframe_id" associated with it.
+
+x.) get the attitude form to display properly
+
+x.) setup the BrowserRouter so that you can link to the airframe's commensurate  
+    parameter page:
+
+
+x.) Create an attitude parameter page that mimics this as close as possible:
+    https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
+    ...on the AttitudeForm.js component.
+
 
 
 ## Instructions for Setting up Backend API for Final Portfolio Project
