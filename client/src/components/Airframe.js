@@ -45,7 +45,11 @@ function Airframe (props) {
         showAirframe() : null }
       </div>
       <Link key={window.location.pathname} to={{
-        pathname: `${window.location.pathname}/params`,}}>
+        pathname: `${window.location.pathname}/params`,
+        state: {
+          name: props.location.state.name // an attempt to transfer the Airframe's name
+        }
+      }}>
         <button>Edit this airframe's parameters</button>
       </Link>
       <button onClick={deleteClick}>Delete this airframe</button>
