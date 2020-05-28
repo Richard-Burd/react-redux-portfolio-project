@@ -1,3 +1,6 @@
+// These fetches are used to build the Redux action creators in the './redux' directory
+// These fetches do not dispatch actions to the Redux reducers, and are written in
+// vanilla JavaScript that can be ran in the console.
 import React, { Component } from 'react'
 
 const BASE_URL = "http://localhost:3001"

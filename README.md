@@ -3,33 +3,36 @@ remember to enter this in the project main directory:
 `./portfolio-project/react-redux-portfolio-project (master) $ npx rails start`
 ...to boot up the front end and back end servers at once.
 
-## Next Sprint
-
-1.) review project requirements & see if you meet each one.
+## project requirements - Put these in the actual final version of the README.
     a.) need 2 container components
         1.) AirframeForm.js
-        2.) AirframesContainer.js  ---------- ???
+        2.) AirframesContainer.js
         3.) AttitudeForm.js
+        4.) ParametersContainer.js
+        5.) Airframe.js
 
     b.) need 5 stateless components
-        1.) Airframe.js
-        2.) ParametersContainer.js
-        3.) AirframeData.js
-        4.) Navbar.js
-        5.) App.js
-        6.) --------------buttons ?????
-        7.) --------------images ??????
+        1.) AirframeData.js
+        2.) Navbar.js
+        3.) App.js
+        4.) --------------navigation buttons          (NavButton.js)
+        5.) --------------parameter-changing buttons  (SetButton.js)
+        6.) --------------textfields
+        7.) --------------attitude-params images
+        8.) --------------Airframe images
 
-2.) look at putting the actions for attitude change in the Redux Action & Controllers
+        https://learn.co/lessons/phrg-presentation-react-components
+        9.) --------------<label>&<input>             (TextField.js)
 
-3.) Rename TestComponent to TestContainer
 
-4.) Get the astronauts out of the state entirely
 
-3.) make the buttons functional components
+## Next Sprint
 
-4.) make the <label> + <input> pairs a separate, functional component
+1.) create the remaining stateless components above
 
+2.) draw up the SVG diagrams for roll & pitch
+
+3.) start work on the project diagram
 
 
 //////////////////////////
@@ -163,6 +166,9 @@ x.) Create an attitude parameter page that mimics this as close as possible:
     https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
     ...on the AttitudeForm.js component.
 
+x.) Rename TestComponent to TestContainer
+
+x.) Get the astronauts out of the state entirely
 
 
 ## Instructions for Setting up Backend API for Final Portfolio Project

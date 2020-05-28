@@ -1,3 +1,4 @@
+// This component renders the basic airframe information not available in Airframe.js
 import React from 'react'
 import AirframeForm from './AirframeForm'
 

@@ -1,4 +1,4 @@
-// this will combine "EditAirframe.js" and "CreateAirframe.js" into one form.
+// This comonent is used to either create [a new] or edit [an existing] airframe.
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { createAirframe, updateAirframe } from '../redux'

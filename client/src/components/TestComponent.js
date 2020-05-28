@@ -1,4 +1,4 @@
-// NOTE: this is used for the testing suite to make sure all of the dependency libraries are up and working.
+// NOTE: this is used for the testing suite to make sure the Redux libraries & browser plugin are working properly.
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchAstronauts } from '../redux'

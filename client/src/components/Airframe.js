@@ -1,3 +1,5 @@
+// This component displays an airframe's name and options the user can take on it.
+// This is where a user would delete an airframe.
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'

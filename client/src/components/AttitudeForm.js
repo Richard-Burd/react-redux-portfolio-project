@@ -1,3 +1,6 @@
+// This component displays an airframe's attitude parameters so the user can
+// change them in (the local) state, then push their changes to the backend
+// Rails API via the './app/controllers/attitudes_controller.rb" directory
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateAttitude } from '../redux'
@@ -13,12 +16,6 @@ class AttitudeForm extends Component {
       lim_pitch_min: this.props.info.lim_pitch_min
     }
   }
-
-  //handleRollChange = (event) => {
-  //  this.setState({
-  //    lim_roll_cd: event.target.value
-  //  })
-  //}
 
   increaseRoll = (event) => {
     this.setState({
@@ -75,7 +72,7 @@ class AttitudeForm extends Component {
             <button type="button" onClick={this.decreaseRoll}>decrease max roll</button>
             <img
               src={'https://cdn.shopify.com/s/files/1/2604/4866/products/F14_Sill_600_1200x630.jpeg'}
-              alt="plane-pitching"
+              alt="plane-rolling"
               style={{
                 border: 'red',
                 borderRadius: '4px',
@@ -91,7 +88,7 @@ class AttitudeForm extends Component {
             <button type="button" onClick={this.decreaseMaxPitch}>decrease max pitch</button>
           <img
             src={'https://i.pinimg.com/originals/40/71/c1/4071c1178cbe7e384f63132b08c91ff9.jpg'}
-            alt="plane-pitching"
+            alt="plane-pitching-up"
             style={{
               border: 'red',
               borderRadius: '4px',
@@ -107,7 +104,7 @@ class AttitudeForm extends Component {
             <button type="button" onClick={this.decreaseMinPitch}>decrease min pitch</button>
           <img
             src={'https://i.pinimg.com/originals/40/71/c1/4071c1178cbe7e384f63132b08c91ff9.jpg'}
-            alt="plane-pitching"
+            alt="plane-pitching-down"
             style={{
               border: 'red',
               borderRadius: '4px',

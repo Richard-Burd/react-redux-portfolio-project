@@ -28,7 +28,7 @@ export function TestHomepage() {
 export function TestAboutpage() {
   return (
     <div>
-      <h1 style={{ color: '#788cdc' }}>The TestAboutpage Component is Now Rendering</h1>
+      <h1 style={{ color: '#5CA548' }}>The TestAboutpage Component is Now Rendering</h1>
     </div>
   )
 }

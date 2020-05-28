@@ -1,3 +1,4 @@
+// This component fetches the list of airframes in the backend Rails-API.
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { fetchAirframes } from '../redux'

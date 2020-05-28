@@ -9,23 +9,11 @@ import ParametersContainer from './components/ParametersContainer'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// Test suite fetches astronauts from open API and renders them here in App.js
-// ...it uses redux actions & reducers located in './redux/test'
-// the './tests' folder contains a series of files that should run if all dependent
-// libraries are functioning properly ...  to run the test suite:
-// 1.) go into './redux/rootReducer' and un-comment the astronaut
-// import TestPortal from './tests/TestPortal'
-
-// This will test the initial state
-// console.log('here is the store.getState()');
-// store.subscribe(()=> console.log(store.getState()))
-
 function App() {
   return (
     <Router>
       <Provider store={store}>
         <div className="App">
-          {/* <TestPortal /> */}
           <Navbar />
           <Switch>
             <Route exact path='/airframes' render={routerProps => <AirframesContainer {...routerProps} />} />
