@@ -19,7 +19,7 @@ remember to enter this in the project main directory:
         5.) LabelAndSelectOption.js
         6.) --------------all buttons                 (Button.js)
         7.) --------------attitude-params SVG images  (AttitudeDisplay.js)
-        8.) --------------Airframe images             (AirframeDisplay)
+        8.) --------------Airframe raster images      (AirframeDisplay)
 
 
 ## Next Sprint
@@ -28,7 +28,15 @@ remember to enter this in the project main directory:
 
 2.) draw up the SVG diagrams for roll & pitch
 
-3.) start work on the project diagram
+3.) style the application
+
+4.) make the project diagram
+
+5.) write a valid README.md file
+
+6.) record a video walkthrough of the project
+
+7.) write a blog post about the project
 
 
 //////////////////////////
