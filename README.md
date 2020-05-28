@@ -15,15 +15,11 @@ remember to enter this in the project main directory:
         1.) AirframeData.js
         2.) Navbar.js
         3.) App.js
-        4.) --------------navigation buttons          (NavButton.js)
-        5.) --------------parameter-changing buttons  (SetButton.js)
-        6.) --------------textfields
-        7.) --------------attitude-params images
-        8.) --------------Airframe images
-
-        https://learn.co/lessons/phrg-presentation-react-components
-        9.) --------------<label>&<input>             (TextField.js)
-
+        4.) LabelAndTextInput.js
+        5.) LabelAndSelectOption.js
+        6.) --------------all buttons                 (Button.js)
+        7.) --------------attitude-params SVG images  (AttitudeDisplay.js)
+        8.) --------------Airframe images             (AirframeDisplay)
 
 
 ## Next Sprint

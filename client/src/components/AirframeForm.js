@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { createAirframe, updateAirframe } from '../redux'
+import LabelAndTextInput from './LabelAndTextInput'
+import LabelAndSelectOption from './LabelAndSelectOption'
 
 class AirframeForm extends Component {
   constructor(props) {
@@ -55,40 +57,33 @@ class AirframeForm extends Component {
         {/* layer of abstraction. */}
         <h2>Airframe Form</h2>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>Name: </label>
-            <input
-              type="text"
-              value={this.state.formName}
-              onChange={this.handleNameChange}
-            />
-          </div>
-          <div>
-          <label>Weight: </label>
-            <input
-              type="text"
-              name="weight"
-              value={this.state.weight}
-              onChange={this.handleAnyEventChange}
-            />
-          </div>
-          <div>
-            <label>Configuration: </label>
-            <select value={this.state.config} name="config" onChange={this.handleAnyEventChange}>
-              <option value="Conventional Tail">Conventional Tail</option>
-              <option value="Flying Wing">Flying Wing</option>
-              <option value="Twin Boom">Twin Boom</option>
-            </select>
-          </div>
-          <div>
-            <label>Image URL: </label>
-            <input
-              type="text"
-              name="image"
-              value={this.state.image}
-              onChange={this.handleAnyEventChange}
-            />
-          </div>
+          <LabelAndTextInput
+            labelName={"Name: "}
+            inputValue={this.state.formName}
+            onChange={this.handleNameChange}
+          />
+          <LabelAndTextInput
+            labelName={"Weight: "}
+            inputValue={this.state.weight}
+            onChange={this.handleAnyEventChange}
+
+            // required b/c key & value in state are the same & it uses handleAnyEventChange()
+            nameValue={"weight"}
+          />
+          <LabelAndSelectOption
+            options={["Conventional Tail", "Flying Wing", "Twin Boom"]}
+            labelName={"Configuration: "}
+            inputValue={this.state.config}
+            onChange={this.handleAnyEventChange}
+          />
+          <LabelAndTextInput
+            labelName={"Image URL: "}
+            inputValue={this.state.image}
+            onChange={this.handleAnyEventChange}
+
+            // required b/c key & value in state are the same & it uses handleAnyEventChange()
+            nameValue={"image"}
+          />
           <button type="submit">Submit</button>
         </form>
       </div>
