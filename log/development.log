@@ -48390,3 +48390,20 @@ Processing by AirframesController#index as */*
 Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1162)
 
 
+Started GET "/airframes" for ::1 at 2020-05-28 19:27:42 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AirframesController#index as */*
+  [1m[36mAirframe Load (0.3ms)[0m  [1m[34mSELECT "airframes"."name", "airframes"."id" FROM "airframes"[0m
+  ↳ app/controllers/airframes_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.7ms | Allocations: 6883)
+
+
+Started GET "/airframes/1" for ::1 at 2020-05-28 19:27:46 -0700
+Processing by AirframesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mAirframe Load (0.2ms)[0m  [1m[34mSELECT "airframes".* FROM "airframes" WHERE "airframes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/airframes_controller.rb:13:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1470)
+
+
