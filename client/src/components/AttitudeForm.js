@@ -9,6 +9,7 @@ import pitchCircleWide from '../graphics/pitchCircleWide.svg'
 import pitchCircleNarrow from '../graphics/pitchCircleNarrow.svg'
 import planeFrontView from '../graphics/planeFrontView.svg'
 import planeSideView from '../graphics/planeSideView.svg'
+import ButtonComponent from './ButtonComponent'
 
 class AttitudeForm extends Component {
   constructor(props) {
@@ -73,8 +74,14 @@ class AttitudeForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <h2>Maximum Roll: {this.state.lim_roll_cd}°</h2><h3>(LIM_ROLL_CD)</h3>
-            <button type="button" onClick={this.increaseRoll}>increase max roll</button>
-            <button type="button" onClick={this.decreaseRoll}>decrease max roll</button>
+            <ButtonComponent
+              displayName={"increase max roll"}
+              onClick={this.increaseRoll}
+            />
+            <ButtonComponent
+              displayName={"decrease max rol"}
+              onClick={this.decreaseRoll}
+            />
             <GraphicComponent
               foregroundSourceImage={planeFrontView}
               foregroundRotation={this.state.lim_roll_cd}
@@ -84,19 +91,31 @@ class AttitudeForm extends Component {
           </div>
           <div>
             <h2>Maximum Pitch: {this.state.lim_pitch_max}°</h2><h3>(LIM_PITCH_MAX)</h3>
-            <button type="button" onClick={this.increaseMaxPitch}>increase max pitch</button>
-            <button type="button" onClick={this.decreaseMaxPitch}>decrease max pitch</button>
-          <GraphicComponent
-            foregroundSourceImage={planeSideView}
-            foregroundRotation={this.state.lim_pitch_max}
-            backgroundSourceImage={pitchCircleNarrow}
-            backgroundRotation={32}
-          />
+            <ButtonComponent
+              displayName={"increase max pitch"}
+              onClick={this.increaseMaxPitch}
+            />
+            <ButtonComponent
+              displayName={"decrease max pitch"}
+              onClick={this.decreaseMaxPitch}
+            />
+            <GraphicComponent
+              foregroundSourceImage={planeSideView}
+              foregroundRotation={this.state.lim_pitch_max}
+              backgroundSourceImage={pitchCircleNarrow}
+              backgroundRotation={32}
+            />
           </div>
           <div>
             <h2>Minimum Pitch: {this.state.lim_pitch_min}°</h2><h3>(LIM_PITCH_MIN)</h3>
-            <button type="button" onClick={this.increaseMinPitch}>increase min pitch</button>
-            <button type="button" onClick={this.decreaseMinPitch}>decrease min pitch</button>
+            <ButtonComponent
+              displayName={"increase min pitch"}
+              onClick={this.increaseMinPitch}
+            />
+            <ButtonComponent
+              displayName={"decrease min pitch"}
+              onClick={this.decreaseMinPitch}
+            />
           <GraphicComponent
             foregroundSourceImage={planeSideView}
             foregroundRotation={this.state.lim_pitch_min}
@@ -104,7 +123,10 @@ class AttitudeForm extends Component {
             backgroundRotation={-25}
           />
           </div>
-          <button type="submit">Submit</button>
+          <ButtonComponent
+            displayName={"Submit"}
+            type={"submit"}
+          />
         </form>
       </div>
     )

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { createAirframe, updateAirframe } from '../redux'
 import LabelAndTextInput from './LabelAndTextInput'
 import LabelAndSelectOption from './LabelAndSelectOption'
+import ButtonComponent from './ButtonComponent'
 
 class AirframeForm extends Component {
   constructor(props) {
@@ -84,7 +85,11 @@ class AirframeForm extends Component {
             // required b/c key & value in state are the same & it uses handleAnyEventChange()
             nameValue={"image"}
           />
-          <button type="submit">Submit</button>
+          <ButtonComponent
+            displayName={"Submit"}
+            type={"submit"}
+            // onClick={}
+          />
         </form>
       </div>
     )

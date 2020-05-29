@@ -5,6 +5,7 @@ import AttitudeForm from './AttitudeForm'
 import { connect } from 'react-redux'
 import { fetchAttitude } from '../redux'
 import { Link } from 'react-router-dom';
+import ButtonComponent from './ButtonComponent'
 
 const ParametersContainer = (props) => {
 
@@ -44,17 +45,28 @@ const ParametersContainer = (props) => {
 
       {/* If the attitude in store is the correct one, show it, and if not, don't */}
       <div>
-        {props.attitudeData.singleAttitude.id === parseInt(number)
-        ?
-        showAttitude()
-        :
-        <button onClick={() => handleClick(number, 1)}>Edit this airframe's attitude parameters</button> }
+        {
+          props.attitudeData.singleAttitude.id === parseInt(number)
+          ?
+          showAttitude()
+          :
+          <ButtonComponent
+            displayName={"Edit this airframe's attitude parameters"}
+            onClick={() => handleClick(number, 1)}
+          />
+        }
       </div>
       <div>
-        <button onClick={() => handleClick(number, 2)}>Edit this airframe's PID parameters</button>
+        <ButtonComponent
+          displayName={"Edit this airframe's PID parameters"}
+          onClick={() => handleClick(number, 2)}
+        />
       </div>
       <div>
-        <button onClick={() => handleClick(number, 3)}>Edit this airframe's plugins parameters</button>
+        <ButtonComponent
+          displayName={"Edit this airframe's plugins parameters"}
+          onClick={() => handleClick(number, 3)}
+        />
       </div>
     </div>
   )

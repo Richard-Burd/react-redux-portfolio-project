@@ -1,6 +1,7 @@
 // This component renders the basic airframe information not available in Airframe.js
 import React from 'react'
 import AirframeForm from './AirframeForm'
+import RasterComponent from './RasterComponent'
 
 export default function AirframeData(props) {
   return (
@@ -8,7 +9,9 @@ export default function AirframeData(props) {
       <div>Name: {props.info.name}</div>
       <div>Weight: {props.info.weight} lbs</div>
       <div>Configuration: {props.info.config}</div>
-      <img src={props.info.image} alt="plane" />
+      <RasterComponent
+        image={props.info.image}
+      />
       <AirframeForm
         formAction={"update"}
         id={props.info.id}

@@ -18,8 +18,8 @@ remember to enter this in the project main directory:
         4.) LabelAndTextInput.js
         5.) LabelAndSelectOption.js
         6.) GraphicComponent.js
-        7.) ----------------------all buttons                 (Button.js)
-        8.) ----------------------Airframe raster images      (AirframeDisplay)
+        7.) ButtonComponent.js
+        8.) RasterComponent.js
 
 
 ## Next Sprint
@@ -30,9 +30,10 @@ remember to enter this in the project main directory:
 
 3.) send Resume to LinkedIn gal
 
-1.) create the remaining stateless components above
+4.) create the remaining stateless components above
 
-2.) draw up the SVG diagrams for roll & pitch
+
+NEXT WEEK:
 
 3.) style the application
 

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { fetchAirframe, deleteAirframe } from '../redux'
 import AirframeData from './AirframeData'
 import { Link } from 'react-router-dom';
+import ButtonComponent from './ButtonComponent'
 
 function Airframe (props) {
 
@@ -36,7 +37,10 @@ function Airframe (props) {
         {props.airframeData.singleAirframe.id !== parseInt(number)
         ?
         <div>
-          <button onClick={handleBasicInfoClick}>View or Edit Basic Airframe Information</button>
+          <ButtonComponent
+            displayName={"View or Edit Basic Airframe Information"}
+            onClick={handleBasicInfoClick}
+          />
         </div> : null }
       </div>
 
@@ -52,9 +56,14 @@ function Airframe (props) {
           name: props.location.state.name // an attempt to transfer the Airframe's name
         }
       }}>
-        <button>Edit this airframe's parameters</button>
+        <ButtonComponent
+          displayName={"Edit this airframe's parameters"}
+        />
       </Link>
-      <button onClick={deleteClick}>Delete this airframe</button>
+      <ButtonComponent
+        displayName={"Delete this airframe"}
+        onClick={deleteClick}
+      />
     </div>
   )
 }
