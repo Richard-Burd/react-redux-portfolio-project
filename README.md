@@ -18,7 +18,7 @@ remember to enter this in the project main directory:
         4.) LabelAndTextInput.js
         5.) LabelAndSelectOption.js
         6.) --------------all buttons                 (Button.js)
-        7.) --------------attitude-params SVG images  (AttitudeDisplay.js)
+        7.) --------------attitude-params SVG images  (GraphicComponent.js)
         8.) --------------Airframe raster images      (AirframeDisplay)
 
 

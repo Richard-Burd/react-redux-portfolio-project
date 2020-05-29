@@ -4,6 +4,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateAttitude } from '../redux'
+import GraphicComponent from './GraphicComponent'
 
 class AttitudeForm extends Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class AttitudeForm extends Component {
             <h2>Maximum Roll: {this.state.lim_roll_cd}°</h2><h3>(LIM_ROLL_CD)</h3>
             <button type="button" onClick={this.increaseRoll}>increase max roll</button>
             <button type="button" onClick={this.decreaseRoll}>decrease max roll</button>
+            <GraphicComponent />
             <img
               src={'https://cdn.shopify.com/s/files/1/2604/4866/products/F14_Sill_600_1200x630.jpeg'}
               alt="plane-rolling"

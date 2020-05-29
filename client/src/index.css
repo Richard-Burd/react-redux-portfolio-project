@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* This is for the ArrowCircle.js graphic */
+.arrow-circle {
+  position: relative; /* absolute from the global scope*/
+  top: 12px;
+  left: 50px;
+}
+
+.circle-graphic {
+  position: relative; /* absolute from the global scope*/
+  top: 12px;
+  left: 50px;
+}

@@ -8,7 +8,6 @@ import AirframeForm from './components/AirframeForm'
 import ParametersContainer from './components/ParametersContainer'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ArrowCircle from './components/ArrowCircle'
 
 function App() {
   return (
@@ -33,7 +32,6 @@ function App() {
             <Route exact path='/airframes/:airframeId/params' render={routerProps => <ParametersContainer {...routerProps} />} />
           </Switch>
         </div>
-        <ArrowCircle />
       </Provider>
     </Router>
   );
