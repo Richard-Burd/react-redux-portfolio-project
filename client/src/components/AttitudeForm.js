@@ -5,6 +5,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateAttitude } from '../redux'
 import GraphicComponent from './GraphicComponent'
+import pitchCircleWide from '../graphics/pitchCircleWide.svg'
+import pitchCircleNarrow from '../graphics/pitchCircleNarrow.svg'
+import planeFrontView from '../graphics/planeFrontView.svg'
+import planeSideView from '../graphics/planeSideView.svg'
 
 class AttitudeForm extends Component {
   constructor(props) {
@@ -71,49 +75,33 @@ class AttitudeForm extends Component {
             <h2>Maximum Roll: {this.state.lim_roll_cd}°</h2><h3>(LIM_ROLL_CD)</h3>
             <button type="button" onClick={this.increaseRoll}>increase max roll</button>
             <button type="button" onClick={this.decreaseRoll}>decrease max roll</button>
-            <GraphicComponent />
-            <img
-              src={'https://cdn.shopify.com/s/files/1/2604/4866/products/F14_Sill_600_1200x630.jpeg'}
-              alt="plane-rolling"
-              style={{
-                border: 'red',
-                borderRadius: '4px',
-                position: 'relative',
-                zIndex: '-1',
-                transform: `rotate(${this.state.lim_roll_cd}deg)`,
-              }}
+            <GraphicComponent
+              foregroundSourceImage={planeFrontView}
+              foregroundRotation={this.state.lim_roll_cd}
+              backgroundSourceImage={pitchCircleWide}
+              backgroundRotation={39}
             />
           </div>
           <div>
             <h2>Maximum Pitch: {this.state.lim_pitch_max}°</h2><h3>(LIM_PITCH_MAX)</h3>
             <button type="button" onClick={this.increaseMaxPitch}>increase max pitch</button>
             <button type="button" onClick={this.decreaseMaxPitch}>decrease max pitch</button>
-          <img
-            src={'https://i.pinimg.com/originals/40/71/c1/4071c1178cbe7e384f63132b08c91ff9.jpg'}
-            alt="plane-pitching-up"
-            style={{
-              border: 'red',
-              borderRadius: '4px',
-              position: 'relative',
-              zIndex: '-1',
-              transform: `rotate(${this.state.lim_pitch_max}deg)`,
-            }}
+          <GraphicComponent
+            foregroundSourceImage={planeSideView}
+            foregroundRotation={this.state.lim_pitch_max}
+            backgroundSourceImage={pitchCircleNarrow}
+            backgroundRotation={32}
           />
           </div>
           <div>
             <h2>Minimum Pitch: {this.state.lim_pitch_min}°</h2><h3>(LIM_PITCH_MIN)</h3>
             <button type="button" onClick={this.increaseMinPitch}>increase min pitch</button>
             <button type="button" onClick={this.decreaseMinPitch}>decrease min pitch</button>
-          <img
-            src={'https://i.pinimg.com/originals/40/71/c1/4071c1178cbe7e384f63132b08c91ff9.jpg'}
-            alt="plane-pitching-down"
-            style={{
-              border: 'red',
-              borderRadius: '4px',
-              position: 'relative',
-              zIndex: '-1',
-              transform: `rotate(${this.state.lim_pitch_min}deg)`,
-            }}
+          <GraphicComponent
+            foregroundSourceImage={planeSideView}
+            foregroundRotation={this.state.lim_pitch_min}
+            backgroundSourceImage={pitchCircleNarrow}
+            backgroundRotation={-25}
           />
           </div>
           <button type="submit">Submit</button>

@@ -19,8 +19,10 @@ code {
   left: 50px;
 }
 
+/*
 .circle-graphic {
-  position: relative; /* absolute from the global scope*/
+  position: relative; /* absolute from the global scope
   top: 12px;
   left: 50px;
 }
+*/

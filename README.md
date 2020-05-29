@@ -17,12 +17,18 @@ remember to enter this in the project main directory:
         3.) App.js
         4.) LabelAndTextInput.js
         5.) LabelAndSelectOption.js
-        6.) --------------all buttons                 (Button.js)
-        7.) --------------attitude-params SVG images  (GraphicComponent.js)
-        8.) --------------Airframe raster images      (AirframeDisplay)
+        6.) GraphicComponent.js
+        7.) ----------------------all buttons                 (Button.js)
+        8.) ----------------------Airframe raster images      (AirframeDisplay)
 
 
 ## Next Sprint
+
+1.) go to trader joes
+
+2.) pay health insurance bill
+
+3.) send Resume to LinkedIn gal
 
 1.) create the remaining stateless components above
 

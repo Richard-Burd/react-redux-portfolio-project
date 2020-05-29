@@ -1,44 +1,55 @@
 import React from 'react'
-import planeSideView from '../graphics/planeSideView.svg'
-import pitchCircle from '../graphics/pitchCircle.svg'
+import horizonLine from '../graphics/horizonLine.svg'
 
-function GraphicComponent() {
+function GraphicComponent(props) {
+  const imageSize = 400
   return (
-    <div className="circle-graphic">
+    <div className="graphic-component">
       <img
+        className="profile-graphic"
 
         // This will be dynamically set by the props
-        height={`400`}
+        src={props.foregroundSourceImage}
 
-        // This will be dynamically set by the props
-        src={planeSideView}
-        className="arrow"
+        height={imageSize}
+
         alt="arrow"
         style={{
-
-          // This will be dynamically set by the props
-          transform: `rotate(43deg)`,
+          transform: `rotate(${props.foregroundRotation}deg)`,
 
           // 'absolute' relative to its parent node: <div className="arrow-circle">
           // this positions the arrow on top of the circle
           position: 'absolute',
-          zIndex: 2
+          zIndex: 1,
+          borderRadius: '50%' // prevents image from blocking button click
         }}
       />
       <img
+        className="circle-graphic"
 
         // This will be dynamically set by the props
-        height={`400`}
+        src={props.backgroundSourceImage}
 
         // This will be dynamically set by the props
-        src={pitchCircle}
-        className="circle"
+        height={imageSize}
+
+
         alt="circle"
         style={{
-
+          transform: `rotate(${props.backgroundRotation}deg)`,
           // This will be dynamically set by the props, it reverses the graphic
-          transform: `scaleY(-1)`,
-          zIndex: -1
+          zIndex: -1,
+          borderRadius: '50%' // prevents image from blocking button click
+        }}
+      />
+      <img
+        className="horizon-line-graphic"
+        src={horizonLine}
+        height={imageSize}
+        alt="horizon"
+        style={{
+          position: 'relative',
+          right: `${imageSize}px`
         }}
       />
     </div>
