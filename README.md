@@ -24,14 +24,8 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) go to trader joes
-
-2.) pay health insurance bill
-
-3.) send Resume to LinkedIn gal
-
-4.) create the remaining stateless components above
-
+1.) Make a
+1.) start making the project diagram
 
 NEXT WEEK:
 
@@ -241,3 +235,106 @@ The instructions start at the "Here we go" title
 ./portfolio-project/front-end (master) $ npm install --save redux-devtools-extension ----Vishwas method
 NOTE: this last one is very important and makes the store a lot cleaner because you don't need this big bag verbage if you use it:
 "window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
+
+
+### Project File Structure
+```
+├── app
+│   ├── controllers
+│   │   ├── airframes_controller.rb
+│   │   ├── application_controller.rb
+│   │   ├── attitudes_controller.rb
+│   │   ├── pids_controller.rb
+│   │   └── plugins_controller.rb
+│   └── models
+│   │   ├── airframe.rb
+│   │   ├── application_record.rb
+│   │   ├── attitude.rb
+│   │   ├── pid.rb
+│   │   └── plugin.rb
+├── client
+│   ├── public
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── src
+│   │   ├── components
+│   │   │   ├── Airframe.js
+│   │   │   ├── AirframeData.js
+│   │   │   ├── AirframeForm.js
+│   │   │   ├── AirframesContainer.js
+│   │   │   ├── AttitudeForm.js
+│   │   │   ├── ButtonComponent.js
+│   │   │   ├── GraphicComponent.js
+│   │   │   ├── LabelAndSelectOption.js
+│   │   │   ├── LabelAndTextInput.js
+│   │   │   ├── ParametersContainer.js
+│   │   │   ├── RasterComponent.js
+│   │   │   └── TestComponent.js
+│   │   ├── graphics
+│   │   │   ├── horizonLine.svg
+│   │   │   ├── pitchCircleNarrow.svg
+│   │   │   ├── pitchCircleWide.svg
+│   │   │   ├── planeFrontView.svg
+│   │   │   └── planeSideView.svg
+│   │   ├── redux
+│   │   │   ├── airframe
+│   │   │   │   ├── AirplaneActions.js
+│   │   │   │   └── AirplaneReducer.js
+│   │   │   ├── attitude
+│   │   │   │   ├── AttitudeActions.js
+│   │   │   │   └── AttitudeReducer.js
+│   │   │   ├── test
+│   │   │   │   ├── TestActions.js
+│   │   │   │   └── TestReducer.js
+│   │   │   ├── index.js
+│   │   │   ├── rootReducer.js
+│   │   │   ├── store.js
+│   │   │   └── urlAndUrns.js
+│   │   ├── tests
+│   │   │   ├── TestFetches.js
+│   │   │   ├── TestLibraries.js
+│   │   │   ├── TestPortal.js
+│   │   │   ├── TestReduxWorkflow.js
+│   │   │   └── TestRouter.js
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   ├── NavBar.js
+│   │   └── serviceWorker.js
+│   ├── gitignore.js  
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   └── yarn.lock
+├── config
+│   ├── initializers
+│   │   └── cors.rb
+│   └── application.rb
+├── db
+│   ├── migrate
+│   │   ├── 20200515145624_create_airframes.rb
+│   │   ├── 20200515155135_create_attitudes
+│   │   ├── 20200515155347_create_pids.rb
+│   │   └── 20200515155545_create_plugins.rb
+│   ├── development.sqlite3
+│   ├── schema.rb
+│   └── seeds.rb
+├── lib
+│   └── tasks
+│       ├── .keep
+│       └── start.rake
+├── log
+├── public
+├── storage
+├── test
+├── tmp
+├── vendor
+├── config.ru
+├── Gemfile
+├── Gemfile.lock
+├── LICENSE
+├── Procfile
+├── Rakefile
+└── README.md
+```
+## License Link

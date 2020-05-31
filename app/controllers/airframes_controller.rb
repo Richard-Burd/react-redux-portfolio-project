@@ -22,7 +22,14 @@ class AirframesController < ApplicationController
       image: params[:java_script_image]
     }
     new_airframe = Airframe.create(airframeData)
-    new_attitude = Attitude.create(airframe_id: new_airframe.id)
+    new_attitude = Attitude.create(
+      airframe_id: new_airframe.id,
+      lim_roll_cd:39,
+      lim_pitch_max: 32,
+      lim_pitch_min: -24
+    )
+
+
     new_pid = Pid.create(airframe_id: new_airframe.id)
     new_plugin = Plugin.create(airframe_id: new_airframe.id)
   end
