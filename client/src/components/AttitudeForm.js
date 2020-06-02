@@ -73,7 +73,7 @@ class AttitudeForm extends Component {
         <div className="attitude-title">Attitude Component Form</div>
         <form onSubmit={this.handleSubmit} className="attitude-form">
           <div className="attitude-text">
-            <h2 className="attitude-name">Maximum Roll: {this.state.lim_roll_cd}°</h2><h3 className="attitude-param">(LIM_ROLL_CD)</h3>
+            <h2 className="attitude-name">Maximum Bank Angle: {this.state.lim_roll_cd}°</h2><h3 className="attitude-param">(LIM_ROLL_CD)</h3>
             <ButtonComponent
               displayName={"increase max roll"}
               onClick={this.increaseRoll}
@@ -82,6 +82,7 @@ class AttitudeForm extends Component {
               displayName={"decrease max roll"}
               onClick={this.decreaseRoll}
             />
+            <p className="attitude-description">Maximum bank angle commanded in modes with stabilized limits. Increase this value for sharper turns, but decrease to prevent accelerated stalls.</p>
             <GraphicComponent
               foregroundSourceImage={planeFrontView}
               foregroundRotation={this.state.lim_roll_cd}
@@ -99,6 +100,7 @@ class AttitudeForm extends Component {
               displayName={"decrease max pitch"}
               onClick={this.decreaseMaxPitch}
             />
+            <p className="attitude-description">Maximum pitch up angle commanded in modes with stabilized limits.</p>
             <GraphicComponent
               foregroundSourceImage={planeSideView}
               foregroundRotation={this.state.lim_pitch_max}
@@ -116,12 +118,13 @@ class AttitudeForm extends Component {
               displayName={"decrease min pitch"}
               onClick={this.decreaseMinPitch}
             />
-          <GraphicComponent
-            foregroundSourceImage={planeSideView}
-            foregroundRotation={this.state.lim_pitch_min}
-            backgroundSourceImage={pitchCircleNarrow}
-            backgroundRotation={-25}
-          />
+            <p className="attitude-description">Maximum pitch down angle commanded in modes with stabilized limits.</p>
+            <GraphicComponent
+              foregroundSourceImage={planeSideView}
+              foregroundRotation={this.state.lim_pitch_min}
+              backgroundSourceImage={pitchCircleNarrow}
+              backgroundRotation={-25}
+            />
           </div>
           <ButtonComponent
             displayName={"Update These Attitude Settings"}

@@ -181,10 +181,54 @@ code {
   color: #6c6a54;
 }
 
+.attitude-description {
+  position: absolute;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 50px;
+  width: 400px;
+}
+
 .attitude-form {
   margin-right: 50%;
 }
 
+.airframe-form {
+  background-color: #c9e8ac
+}
+
+.airframe-form-title {
+  padding: 20px;
+  color: #879b74;
+  text-align: center;
+}
+
+.label-and-text-input, .label-and-select-option {
+  padding: 10px;
+  margin-left: 100px;
+  color: #5a6e48;
+  font-size: 120%;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+.label-and-select-dropdown {
+  height: 25px;
+  border-radius: 4px;
+}
+
+.input-field-text {
+  border-radius: 4px;
+  border:1.5px solid #582a0e;
+  height: 20px;
+
+}
+
+.input-field-text:focus {
+  border-radius: 4px;
+  border: 3px solid #555;
+
+}
 
 /* Graphics in Attitude Parameter Settings */
 .graphic-component {

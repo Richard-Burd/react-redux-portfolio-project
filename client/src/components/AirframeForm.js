@@ -52,11 +52,8 @@ class AirframeForm extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: '#bfeec4' }}>
-        {/* NOTE: these inputs are not refactored so you (the React learner */}
-        {/* onboarding this code) can see what the code looks like with one less */}
-        {/* layer of abstraction. */}
-        <h2>Airframe Form</h2>
+      <div className="airframe-form">
+        <h2 className="airframe-form-title">Basic Airframe Info</h2>
         <form onSubmit={this.handleSubmit}>
           <LabelAndTextInput
             labelName={"Name: "}

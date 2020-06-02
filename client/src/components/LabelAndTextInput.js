@@ -5,7 +5,7 @@ function LabelAndTextInput(props) {
     <div className="label-and-text-input">
       <label className="label-name">{props.labelName}</label>
       <input
-        className="input-filed-text"
+        className="input-field-text"
         type="text"
         value={props.inputValue}
         onChange={props.onChange}

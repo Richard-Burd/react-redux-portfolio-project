@@ -14,8 +14,8 @@ function LabelAndSelectOption(props) {
 
   return (
     <div className="label-and-select-option">
-      <label>{props.labelName}</label>
-      <select
+      <label className="label-and-select-name">{props.labelName}</label>
+      <select className="label-and-select-dropdown"
         name="config"
         value={props.inputValue}
         onChange={props.onChange}
