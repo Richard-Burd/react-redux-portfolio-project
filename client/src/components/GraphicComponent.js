@@ -20,7 +20,7 @@ function GraphicComponent(props) {
           // 'absolute' relative to its parent node: <div className="arrow-circle">
           // this positions the arrow on top of the circle
           position: 'absolute',
-          zIndex: 1,
+          zIndex: 3,
           borderRadius: '50%' // prevents image from blocking button click
         }}
       />
@@ -36,9 +36,10 @@ function GraphicComponent(props) {
 
         alt="circle"
         style={{
+          position: 'absolute',
           transform: `rotate(${props.backgroundRotation}deg)`,
           // This will be dynamically set by the props, it reverses the graphic
-          zIndex: -1,
+          zIndex: 2,
           borderRadius: '50%' // prevents image from blocking button click
         }}
       />
@@ -48,8 +49,8 @@ function GraphicComponent(props) {
         height={imageSize}
         alt="horizon"
         style={{
-          position: 'relative',
-          right: `${imageSize}px`
+          zIndex: 3,
+          position: 'absolute',
         }}
       />
     </div>

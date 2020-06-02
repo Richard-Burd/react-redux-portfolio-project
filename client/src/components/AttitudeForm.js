@@ -69,17 +69,17 @@ class AttitudeForm extends Component {
     console.log('here are my props');
     console.log(this.props);
     return (
-      <div>
+      <div className="attitude-section">
         <div className="attitude-title">Attitude Component Form</div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
+        <form onSubmit={this.handleSubmit} className="attitude-form">
+          <div className="attitude-text">
             <h2 className="attitude-name">Maximum Roll: {this.state.lim_roll_cd}°</h2><h3 className="attitude-param">(LIM_ROLL_CD)</h3>
             <ButtonComponent
               displayName={"increase max roll"}
               onClick={this.increaseRoll}
             />
             <ButtonComponent
-              displayName={"decrease max rol"}
+              displayName={"decrease max roll"}
               onClick={this.decreaseRoll}
             />
             <GraphicComponent
@@ -89,7 +89,7 @@ class AttitudeForm extends Component {
               backgroundRotation={39}
             />
           </div>
-          <div>
+          <div className="attitude-text">
             <h2 className="attitude-name">Maximum Pitch: {this.state.lim_pitch_max}°</h2><h3 className="attitude-param">(LIM_PITCH_MAX)</h3>
             <ButtonComponent
               displayName={"increase max pitch"}
@@ -106,7 +106,7 @@ class AttitudeForm extends Component {
               backgroundRotation={32}
             />
           </div>
-          <div>
+          <div className="attitude-text">
             <h2 className="attitude-name">Minimum Pitch: {this.state.lim_pitch_min}°</h2><h3 className="attitude-param">(LIM_PITCH_MIN)</h3>
             <ButtonComponent
               displayName={"increase min pitch"}

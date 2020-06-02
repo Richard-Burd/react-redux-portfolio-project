@@ -21,7 +21,7 @@ code {
 
 /* navagation bar */
 .nav-bar {
-  z-index: 2;
+  z-index: 4;
   background-color: #b87450;
   color: white;
   padding: 10px;
@@ -151,11 +151,26 @@ code {
 }
 
 /* Attitude Parameter Settings */
+.attitude-section {
+  background-image: linear-gradient(
+    to right,
+      #e2f3d2 ,
+      white,
+      white
+  );
+}
+
 .attitude-title {
   font-size: 300%;
   letter-spacing: 0.1em;
   font-weight: bold;
   color: #b4b195;
+  padding: 30px;
+  margin: 0px, 0, 0, 100px, 0;
+}
+
+.attitude-text {
+  margin-bottom: 200px;
 }
 
 .attitude-name {
@@ -166,9 +181,12 @@ code {
   color: #6c6a54;
 }
 
+.attitude-form {
+  margin-right: 50%;
+}
 
 
 /* Graphics in Attitude Parameter Settings */
 .graphic-component {
-  margin-left: 25%, /* centers the interactive graphics */
+  margin: -180px 00px 400px 450px; /* centers the interactive graphics */
 }
