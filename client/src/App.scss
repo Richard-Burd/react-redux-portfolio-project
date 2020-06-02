@@ -6,7 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* this is adding huge spaces between the attitude graphics */
+  /*
+  Prevents elements from being covered by the navigation bar.
+  Also adds space between attitude graphics so as to associate
+  each one with its commensurate buttons.
+  */
   padding-top: 100px;
 }
 
@@ -15,9 +19,7 @@ code {
     monospace;
 }
 
-/* BEGIN CUSTOM STYLING */
-
-/* Navagation Bar Start */
+/* navagation bar */
 .nav-bar {
   z-index: 2;
   background-color: #b87450;
@@ -25,7 +27,7 @@ code {
   padding: 10px;
   border: 0px;
   margin: 0px;
-  position: fixed; /* Set the navbar to fixed position */
+  position: fixed;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
@@ -61,9 +63,7 @@ code {
   color: white;
 }
 
-/* Navagation Bar End */
-
-/* Home Page Start */
+/* homepage settings */
 .container {
     border: 3px solid #b87450;
     padding: 00px 20px 20px;
@@ -89,61 +89,86 @@ code {
   color: #8a8767;
   font-size: 110%;
 }
-/* Home Page End */
 
-/* END CUSTOM STYLING */
-
-
-
-
-
-/* This is the default styling that the create-react-app generated */
-
-/* This is for the ArrowCircle.js graphic */
-
-
-
-/*
-.circle-graphic {
-  position: relative; /* absolute from the global scope
-  top: 12px;
-  left: 50px;
+/* all buttons throughout the app */
+.buttons {
+  background-image: linear-gradient(#97651d, #c0aa8a);
+  font-size: 120%;
+  font-style: italic;
+  font-weight: bold;
+  color: white;
+  border:1.5px solid #582a0e;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 15px;
 }
-*/
 
-/*
-.App {
+.buttons:hover {
+  background-image: linear-gradient(#c0aa8a, #97651d);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* http://localhost:3000/airframes */
+.airframes-list {
   text-align: center;
 }
-*/
-/*
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* http://localhost:3000/airframes */
+.airframes-list-title {
+  color: #5a4e1d;
+  font-size: 200%;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* http://localhost:3000/airframes/:id */
+.airframe-name-w-options {
+  text-align: center;
+  font-size: 200%;
+  font-weight: bold;
+  letter-spacing: 0.4em;
+  color: #5a4e1d;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+/* http://localhost:3000/airframes/:id */
+.airframe-parameter-options {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* http://localhost:3000/airframes/:id/params */
+.params-title {
+  color: #5a2a1d;
+  font-size: 170%;
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
-*/
+
+/* http://localhost:3000/airframes/:id/params */
+.params-selections {
+  text-align: center;
+}
+
+/* Attitude Parameter Settings */
+.attitude-title {
+  font-size: 300%;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  color: #b4b195;
+}
+
+.attitude-name {
+  color: #4e4c3a;
+}
+
+.attitude-param {
+  color: #6c6a54;
+}
+
+
+
+/* Graphics in Attitude Parameter Settings */
+.graphic-component {
+  margin-left: 25%, /* centers the interactive graphics */
+}

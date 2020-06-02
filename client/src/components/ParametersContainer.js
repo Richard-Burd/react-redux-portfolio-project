@@ -14,7 +14,7 @@ const ParametersContainer = (props) => {
       props.fetchAttitude(index)
     } else {
       console.log("That button isn't setup yet")
-      alert("Sorry, only attitude params are available in v0.1")
+      alert("Sorry, only attitude params are available in v.0.1")
     }
   }
 
@@ -31,8 +31,8 @@ const ParametersContainer = (props) => {
   // console.log(props);
   const number = props.match.params.airframeId
   return (
-    <div>
-      <h2>This is the Parameters container for &nbsp;
+    <div className="params-selections">
+      <h2 className="params-title">Parameters for: &nbsp;
       <Link key={window.location.pathname} to={{
         pathname: `/airframes/${number}`,
         state: {
@@ -41,7 +41,7 @@ const ParametersContainer = (props) => {
       }}>
         {props.location.state.name}
       </Link>
-      &nbsp; Airframe No. #{number}</h2>
+      </h2>
 
       {/* If the attitude in store is the correct one, show it, and if not, don't */}
       <div>

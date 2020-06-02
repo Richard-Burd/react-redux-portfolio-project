@@ -30,8 +30,8 @@ function Airframe (props) {
   }
 
   return (
-    <div>
-      <div>UAV System Name: {props.location.state.name}</div>
+    <div className="airframe-parameter-options">
+      <div className="airframe-name-w-options">{props.location.state.name}</div>
 
       <div>
         {props.airframeData.singleAirframe.id !== parseInt(number)

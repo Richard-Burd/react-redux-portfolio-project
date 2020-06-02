@@ -13,9 +13,9 @@ function AirframesContainer ({ airframeData, fetchAirframes }) {
   ) : airframeData.error ? (
     <h2>{airframeData.error}</h2>
   ) : (
-    <div>
-      <h1>Airframes List</h1>
-      <div>
+    <div  className="airframes-list">
+      <h1  className="airframes-list-title">Airframes in the Database:</h1>
+      <div  className="airframes-list-item">
         {airframeData &&
           airframeData.airframes &&
           airframeData.airframes.map((airframe, index) =>

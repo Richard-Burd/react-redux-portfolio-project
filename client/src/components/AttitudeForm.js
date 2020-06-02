@@ -70,10 +70,10 @@ class AttitudeForm extends Component {
     console.log(this.props);
     return (
       <div>
-        <div>Attitude Component Form</div>
+        <div className="attitude-title">Attitude Component Form</div>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <h2>Maximum Roll: {this.state.lim_roll_cd}°</h2><h3>(LIM_ROLL_CD)</h3>
+            <h2 className="attitude-name">Maximum Roll: {this.state.lim_roll_cd}°</h2><h3 className="attitude-param">(LIM_ROLL_CD)</h3>
             <ButtonComponent
               displayName={"increase max roll"}
               onClick={this.increaseRoll}
@@ -90,7 +90,7 @@ class AttitudeForm extends Component {
             />
           </div>
           <div>
-            <h2>Maximum Pitch: {this.state.lim_pitch_max}°</h2><h3>(LIM_PITCH_MAX)</h3>
+            <h2 className="attitude-name">Maximum Pitch: {this.state.lim_pitch_max}°</h2><h3 className="attitude-param">(LIM_PITCH_MAX)</h3>
             <ButtonComponent
               displayName={"increase max pitch"}
               onClick={this.increaseMaxPitch}
@@ -107,7 +107,7 @@ class AttitudeForm extends Component {
             />
           </div>
           <div>
-            <h2>Minimum Pitch: {this.state.lim_pitch_min}°</h2><h3>(LIM_PITCH_MIN)</h3>
+            <h2 className="attitude-name">Minimum Pitch: {this.state.lim_pitch_min}°</h2><h3 className="attitude-param">(LIM_PITCH_MIN)</h3>
             <ButtonComponent
               displayName={"increase min pitch"}
               onClick={this.increaseMinPitch}
@@ -124,7 +124,7 @@ class AttitudeForm extends Component {
           />
           </div>
           <ButtonComponent
-            displayName={"Submit"}
+            displayName={"Update These Attitude Settings"}
             type={"submit"}
           />
         </form>
