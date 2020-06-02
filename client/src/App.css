@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* this is adding huge spaces between the attitude graphics */
+  padding-top: 100px;
 }
 
 code {
@@ -12,12 +15,69 @@ code {
     monospace;
 }
 
-/* This is for the ArrowCircle.js graphic */
-.arrow-circle {
-  position: relative; /* absolute from the global scope*/
-  top: 12px;
-  left: 50px;
+/* BEGIN CUSTOM STYLING */
+
+/* Navagation Bar Start */
+.nav-bar {
+  z-index: 2;
+  background-color: #b87450;
+  color: white;
+  padding: 10px;
+  border: 0px;
+  margin: 0px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
+
+.nav-bar-title {
+  font-size: 170%;
+  letter-spacing: 0.2em;
+  color: #e7d6cd;
+  padding-bottom: 20px;
+  border: 0px;
+  margin: 0px;
+}
+
+.nav-bar-options {
+  list-style-type: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 40%;
+  border: 0px;
+  margin: 0px;
+}
+
+.navlink:link {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  color: white;
+}
+
+/* Navagation Bar End */
+
+/* Home Page Start */
+
+/* Home Page End */
+
+/* END CUSTOM STYLING */
+
+
+
+
+
+/* This is the default styling that the create-react-app generated */
+
+/* This is for the ArrowCircle.js graphic */
+
+
 
 /*
 .circle-graphic {
@@ -27,15 +87,12 @@ code {
 }
 */
 
+/*
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
+*/
+/*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -65,3 +122,4 @@ code {
     transform: rotate(360deg);
   }
 }
+*/

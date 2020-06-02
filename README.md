@@ -247,11 +247,11 @@ NOTE: this last one is very important and makes the store a lot cleaner because 
 │   │   ├── pids_controller.rb
 │   │   └── plugins_controller.rb
 │   └── models
-│   │   ├── airframe.rb
-│   │   ├── application_record.rb
-│   │   ├── attitude.rb
-│   │   ├── pid.rb
-│   │   └── plugin.rb
+│       ├── airframe.rb
+│       ├── application_record.rb
+│       ├── attitude.rb
+│       ├── pid.rb
+│       └── plugin.rb
 ├── client
 │   ├── public
 │   │   ├── index.html

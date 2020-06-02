@@ -6,6 +6,7 @@ import AirframesContainer from './components/AirframesContainer'
 import Airframe from './components/Airframe'
 import AirframeForm from './components/AirframeForm'
 import ParametersContainer from './components/ParametersContainer'
+import HomePage from './components/HomePage'
 import Navbar from './Navbar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ function App() {
         <div className="App">
           <Navbar />
           <Switch>
+          <Route exact path='/' render={()=> <HomePage />} />
             <Route exact path='/airframes' render={routerProps => <AirframesContainer {...routerProps} />} />
             <Route exact path='/airframes/:airframeId' render={routerProps => <Airframe {...routerProps} />} />
             <Route exact path='/new-airframe'
