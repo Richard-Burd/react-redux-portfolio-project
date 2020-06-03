@@ -5,7 +5,7 @@ function RasterComponent(props) {
     <div className="raster-image-container">
       <img
         className="raster-image"
-        height="250"
+        height="150"
         src={props.image}
         alt="plane" />
     </div>

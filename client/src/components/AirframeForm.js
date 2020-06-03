@@ -82,11 +82,12 @@ class AirframeForm extends Component {
             // required b/c key & value in state are the same & it uses handleAnyEventChange()
             nameValue={"image"}
           />
-          <ButtonComponent
-            displayName={"Submit"}
-            type={"submit"}
-            // onClick={}
-          />
+          <div className="airframe-form-submit-button">
+            <ButtonComponent
+              displayName={"Submit"}
+              type={"submit"}
+            />
+          </div>
         </form>
       </div>
     )
