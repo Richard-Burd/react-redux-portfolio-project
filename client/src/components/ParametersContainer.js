@@ -64,7 +64,7 @@ const ParametersContainer = (props) => {
       </div>
       <div>
         <ButtonComponent
-          displayName={"Edit this airframe's plugins parameters"}
+          displayName={"Edit this airframe's plugin parameters"}
           onClick={() => handleClick(number, 3)}
         />
       </div>

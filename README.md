@@ -24,20 +24,33 @@ remember to enter this in the project main directory:
 
 ## Next Sprint
 
-1.) Make a
-1.) start making the project diagram
+1.) make the project diagrams
+    a.) figure out how to abstract the rendering...it's too big as is
+        i.) Maybe have a super-abstract floor plan...
+        i.) ...then also a super details process flow diagram
+    b.) Make a diagram of just the views (show them all w/links + state)
 
-NEXT WEEK:
+2.) write a valid README.md file
 
-3.) style the application
+3.) record a video walkthrough of the project
+    a.) First show the ArduPilot homepage & explain what that is.
 
-4.) make the project diagram
+    b.) Show the parameter checklist with Agribotix Logo so we see the problem we're solving
+        i.) explain that this is v.0.1
 
-5.) write a valid README.md file
+    c.) Show a visual of people working in the field with a drone.
 
-6.) record a video walkthrough of the project
+    d.) Explain that in the field, you only want to contact the server when needed.
+    e.) Explain that you only want to download or push to the server when needed
 
-7.) write a blog post about the project
+    f.) Explain that architecturally, the redux store & the server are always in sync.
+        a.) a Redux store exists, but local state is also used
+
+    g.) review the 3 options in the navbar
+    h.) Walk them throuhg the entire CRUD process
+
+
+4.) write a blog post about the project
 
 
 //////////////////////////

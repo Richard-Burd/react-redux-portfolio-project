@@ -37,7 +37,7 @@ function Airframe (props) {
         ?
         <div>
           <ButtonComponent
-            displayName={"View or Edit Basic Airframe Information"}
+            displayName={"View or edit basic airframe information"}
             onClick={handleBasicInfoClick}
           />
         </div> : null }

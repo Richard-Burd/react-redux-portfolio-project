@@ -24,10 +24,10 @@ function App() {
               render={(props) =>
                 <AirframeForm {...props}
                   formAction={"create"}
-                  name={"F-14B "}
-                  weight={40100}
+                  name={"New Airframe Name Here"}
+                  weight={"enter weight here"}
                   config={"Conventional Tail"}
-                  image={"https://www.squadron.com/v/vspfiles/photos/TM61114-3.jpg"}
+                  image={"https://th.bing.com/th/id/OIP.sVo68GHf6MsLbtdAimNnogHaE8?pid=Api&rs=1.jpg"}
                 />
               }
             />

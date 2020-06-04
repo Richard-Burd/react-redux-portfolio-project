@@ -70,7 +70,7 @@ class AttitudeForm extends Component {
     console.log(this.props);
     return (
       <div className="attitude-section">
-        <div className="attitude-title">Attitude Component Form</div>
+        <div className="attitude-title">Attitude Parameters</div>
         <form onSubmit={this.handleSubmit} className="attitude-form">
           <div className="attitude-text">
             <h2 className="attitude-name">Maximum Bank Angle: {this.state.lim_roll_cd}°</h2><h3 className="attitude-param">(LIM_ROLL_CD)</h3>
@@ -127,7 +127,7 @@ class AttitudeForm extends Component {
             />
           </div>
           <ButtonComponent
-            displayName={"Update These Attitude Settings"}
+            displayName={"Update these attitude settings"}
             type={"submit"}
           />
         </form>
