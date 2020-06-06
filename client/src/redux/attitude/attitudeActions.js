@@ -1,6 +1,3 @@
-// keep.
-// a.) fetchAttitude(airframeId)
-// b.) updateAttitude(airframeId)
 import { AIRFRAMES_APP_URL, ATTITUDES_API_URL } from '../urlAndUrns'
 
 export function fetchAttitude(airframeId) {
