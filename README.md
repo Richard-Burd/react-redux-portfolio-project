@@ -1,256 +1,57 @@
-## NOTE TO SELF:
-remember to enter this in the project main directory:
-`./portfolio-project/react-redux-portfolio-project (master) $ npx rails start`
-...to boot up the front end and back end servers at once.
 
-## project requirements - Put these in the actual final version of the README.
-    a.) need 2 container components
-        1.) AirframeForm.js
-        2.) AirframesContainer.js
-        3.) AttitudeForm.js
-        4.) ParametersContainer.js
-        5.) Airframe.js
+# React-Redux Portfolio Project
+This is a portfolio project submittal for Module 16 of the Full-Stack Web Development program at Flatiron School.&nbsp; This project makes use of React and Redux together and is meant to show a basic level competency in those two JavaScript libraries.
 
-    b.) need 5 stateless components
-        1.) AirframeData.js
-        2.) Navbar.js
-        3.) App.js
-        4.) LabelAndTextInput.js
-        5.) LabelAndSelectOption.js
-        6.) GraphicComponent.js
-        7.) ButtonComponent.js
-        8.) RasterComponent.js
+## Getting Started
+To run this app locally, you will need to have [Rails](https://rubyonrails.org/) and [Node Package Manager](https://docs.npmjs.com/about-npm/) already installed.  After that type these commands into your console while in the app's main directory:
+1. `$ npm install` to get the necessary node libraries.
+2. `$ rails db: migrate` to run the ActiveRecord migrations
+3. `$ rails db: seed` to seed the database with three airframes & their parameters.
+4. `$ rails start` to boot up the server courtesy of: *./lib/tasks/start.rake*
 
+## The Problem Being Solved
 
-## Next Sprint
+This app is designed to be an interactive parameter editor for the [ArduPlane](https://ardupilot.org/plane/) open source software suite.&nbsp; This software provides autonomous control for unmanned aerial vehicles (UAV's) and has several, [customizable parameters](https://ardupilot.org/plane/docs/parameters.html) that can be adjusted so as to tailor the software to a specific UAV body, or **airframe** in aviation jargon.&nbsp;
 
-1.) make the project diagrams
-    a.) figure out how to abstract the rendering...it's too big as is
-        i.) Maybe have a super-abstract floor plan...
-        i.) ...then also a super details process flow diagram
-    b.) Make a diagram of just the views (show them all w/links + state)
+![](https://ardupilot.org/application/files/8714/8419/9139/2048x1536-1.jpg)
+*a team of drone technicians getting ready for takeoff somewhere outside*
 
-2.) write a valid README.md file
+In order to adjust these parameters, users interact with a not-so intuitive GUI designed for simplicity and parsimony.&nbsp;  Here is an example of what they're looking at:
 
-3.) record a video walkthrough of the project
-    a.) First show the ArduPilot homepage & explain what that is.
+![enter image description here](https://ardupilot.org/plane/_images/missPlannTuningTECS.png)
 
-    b.) Show the parameter checklist with Agribotix Logo so we see the problem we're solving
-        i.) explain that this is v.0.1
+Because the interface is so basic, users often struggle to keep track of which parameters do what and so they end up making cheat-sheets like this one I put together several years ago:
+![Imgur](https://i.imgur.com/yzeb0vr.png)
 
-    c.) Show a visual of people working in the field with a drone.
+So then, this app is designed to be a graphically intuitive, ArduPlane parameter editor guide that does what this 2D graphical checklist above does, but better.&nbsp;  In sum, the app provides a user with graphics that *illustrate* what each parameter does and how changing *that* parameter will effect outcomes with responsive, animated graphics.
 
-    d.) Explain that in the field, you only want to contact the server when needed.
-    e.) Explain that you only want to download or push to the server when needed
+Currently this is just a  v.0.1 demonstrator that would be presented to drone technicians for feedback.&nbsp;  The Arduplane software has somewhere around 90 flight-parameters and all this app does is create, read, update, and delete (**CRUD**) three of them, along with an associated airframe.&nbsp;  Even with this small delivery, the number of React components used to create this app far exceed the [project requirements](https://learn.co/tracks/full-stack-web-development-v8/module-17-redux/section-5-redux-final-project/react-redux-portfolio-project).&nbsp;
 
-    f.) Explain that architecturally, the redux store & the server are always in sync.
-        a.) a Redux store exists, but local state is also used
+## User Interface
+The app let's a user CRUD an airframe with a name & some basic info.&nbsp;  When an airframe is created, a default set of 3 parameters are also created for, and associated with,  that same airframe.&nbsp;  These parameters control the airframe's maximum allowable [pitch, roll, and yaw](https://en.wikipedia.org/wiki/Aircraft_principal_axes) while in an [autonomous flight mode](https://ardupilot.org/plane/docs/flight-modes.html):&nbsp;
 
-    g.) review the 3 options in the navbar
-    h.) Walk them throuhg the entire CRUD process
+![Imgur](https://i.imgur.com/FtbLpaB.jpg)
 
+The three parameters are edited on the ***/airframes/:id/params***  path as shown in the lower right-hand box in the illustration above.&nbsp;  There are three interactive graphics that change orientation as the user manipulates their values.  This allows the user to *see* what their changes are doing rather than having to remember specifics they read way back from the boring [documentation](https://ardupilot.org/plane/docs/parameters.html).&nbsp;
 
-4.) write a blog post about the project
+## Client - Server Communication
+While manipulating these parameters, the user is sending their changes to a local React component state on the front-end, rather than the Redux store.  Only when the user *saves* their changes are those changes sent to the server.  The user only grabs data from the server whenever absolutely necessary since they will likely be in a field environment far away from solid internet access:&nbsp;
 
 
-//////////////////////////
-5.) on the EditAirframe page that takes you to:
-    localhost3000/airframes/1/edit <= there you will have four buttons:
-    a.) edit basic params
-    b.) edit attitude params
-    c.) edit pid params
-    d.) edit plugin params
+![Imgur](https://i.imgur.com/CQg659p.jpg)
 
-2.) the next step is to create buttons for getting each of the parameter lists:
-    a.) attitude params
-    b.) PID params
-    c.) plugins params
+## Application Architecture
 
-1.) style the images in CSS with controls on the sizes
+This app uses two communication paths as shown below.&nbsp;  First let's discuss the green arrows that say *request* and *read*:
 
-2.) Once that basic page is rendering airframe names, add delete buttons to each one
-    a.) this includes a delete action
-    b.) this includes a delete "case" in the reducer
 
-3.) go through and mimic the astronauts redux-workflow for the airframes, get everything working.
+![Imgur](https://i.imgur.com/uyd91GW.jpg)
 
-4.) at some point you need to make an illustration of what you're calling the "redux-workflow"
-    so that you actually understand what the hell is going on with it and can make the rest of
-    the app.
+When rendering back-end data, React functional components (such as `AirframeData.js` ) send requests to the Redux layer, and the Redux layer in turn grabs the appropriate data from the server, and then puts it in the proper place within the central Redux store.&nbsp;  Once in store, all components in the app are able to access the data.
 
+When a user persists to the back-end database, the workflow follows the orange arrows that say *create, update,* & *delete*.&nbsp;  Here, React container components like `Airframe.js` & `AirframeForm.js` that use a React class component's local state send requests to the Redux, action controllers, but bypass the Redux reducers & store and  go straight to the back-end server.&nbsp; This is immediately followed by a page reload and now the server and store are synced with changes traveling unidirectionally, from server to store and never the other way around.&nbsp;  This makes expansion and manipulation of the code base much easier because we are only keeping track of persistence in one direction as opposed to two.&nbsp; The philosophy here is: *if the user hasn't saved their changes, the store doesn't care to know about it yet.*
 
-
-## Completed Tasks
-
-x.) go back to the DevEd React Routes tutorial & see how to implement dynamic routes, they
-    will be needed to implement the other pages in the application.
-
-x.) create an "update" fetch for the airframes
-
-x.) Delete unnecessary react icons and simplify App.js
-
-x.) create read actions (index...not show...show will never be used in this app)
-    for the other objects bs/ seeing one at a time isn't a thing:
-    a.) attitude
-    b.) pid
-    c.) pluggins
-
-x.) create an "update" action for the other objects:
-    a.) attitude
-    b.) Pid
-    c.) Pluggins
-    NOTE: you do not need a "delete" or "create action" for any of these...
-    ...you just need to be able to update them
-
-x.) Left off on Airframe.js
-    a.) figure out how to fetch & render a single airframe on that page.
-    b.) use the correct lifecycle hooks if needed.
-    c.) you need to match the patterns in the Nested Routes lab:
-        i.) the "App" doesn't have <Switch> logic
-        i.) you need the ({ match, movies }) logic you see on the MoviesPage component in order
-            to get an individual airframe to properly render
-
-x.) create folder structure in React app based on this workspace:
-    https://github.com/Richard-Burd/react-redux-sandbox/tree/master/React-Redux-Tutorials/react-redux-demo
-
-x.) Install all the necessary libraries for a react-redux workspace
-    a.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npx install redux react-redux
-    b.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install react-router-dom
-    c.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-thunk
-    d.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install redux-logger
-    e.) ./portfolio-project/react-redux-portfolio-project/client (master) $ npm install --save redux-devtools-extension
-
-x.) Create the necessary store, action & reducer files needed to fetch astronauts and use them as an example for testing the libraries to make sure they are functioning properly in this workspace
-
-x.) in the delete action for airframes, add the extra code needed to delete
-    all of the commensurate data: Pids, Attitude, et. al.
-
-x.) create a new & separate "Test" component to make sure the React Router
-    stuff is working properly.
-    a.) create a set of simple links within (and inbetween) the files in them
-        "tests" folder
-
-x.) The next step is to get a page to render that shows a list of existing airframes
-    a.) Make sure you have at least 3 airframes in the seed data prior to starting this
-
-x.) put a delete button on Airframe.js and get the
-
-x.) put an "Edit" button on the Airframe.js
-
-x.) clean up the Action & reducer & make sure the DELETE function only does what it needs to
-    and doesn't contain un-necessary code
-
-x.) either pass props to child components or make sure the page refetches any props needed.
-
-x.) make the BasicForm such that when you see it, it's values are already filled in with
-        the existing parameter information.
-
-x.) get the EDIT action in BasicForm working
-
-x.) delete any redundant matchDispatchToProps that you might have in the EditAirframe container
-
-x.) make an option to create an airframe...
-
-x.) get a single form working for both creating and updating
-    a.) compare "EditAirframe.js" & "CreateAirframe.js" side by side to see where they differ
-    b.) combine them somehow into a sigle form.
-        i.) s.thing like...
-              if (state.singleAirframe == "undefined") {
-                createAirframe()
-              } else { updateAirframe }
-x.) make the "const showAirframe = () => {}" in "Airframe.js" a separate component
-
-x.) setup the backend so that when you create a new airframe, you also create it's
-    attitude, PID, and plugins parameters set to null.
-
-x.) make the attitude update action in the Attitudes controller functional.
-
-x.) get the attitude 'show' & 'update' fetches working.  You don't need destroy or index
-    a.) fetchAttitude(airframeId)
-    b.) updateAttitude(airframeId)
-
-x.) Have the browser-router display attitude params like this:
-    http://localhost:3000/airframes/4/params/attitude
-    ...NOTE: you will reference the airframe ID, not any of the param id's
-    ...this means you match everything to a parameter's "airframe_id" associated with it.
-
-x.) get the attitude form to display properly
-
-x.) setup the BrowserRouter so that you can link to the airframe's commensurate  
-    parameter page:
-
-
-x.) Create an attitude parameter page that mimics this as close as possible:
-    https://www.pluralsight.com/guides/handling-multiple-inputs-with-single-onchange-handler-react
-    ...on the AttitudeForm.js component.
-
-x.) Rename TestComponent to TestContainer
-
-x.) Get the astronauts out of the state entirely
-
-
-## Instructions for Setting up Backend API for Final Portfolio Project
-Instructions are here:
-https://www.newline.co/fullstack-react/articles/how-to-get-create-react-app-to-work-with-your-rails-api/
-
-The repo this is based on is here:
-https://github.com/fullstackreact/food-lookup-demo-rails
-
-
-The instructions start at the "Here we go" title
-
-1.) ./portfolio-project (master) $ create-react-app client
-      ...this will create a React app called "client"
-
-2.) Create a backend Rails API app in the same directory:
-    ./portfolio-project (master) $ rails new server --api
-    ...this will create a Rails app called "server"
-
-3.) Go into the backend Rails API app and add the following gem to the Gemfile:
-    a.) gem 'foreman', '~> 0.82.0'
-    ...then make sure to run bundle install
-
-4.) inside (the main directory of ?) the backend Rails API create a folder called: Procfile
-
-5.) Inside Procfile you need 2 lines of code that look like this:
-    ```
-    web: cd client && npm start
-    api: bundle exec rails s -p 3001
-    ```
-6.) Inside the Rails app run this command:
-    ./portfolio-project/server (master) $ foreman start -p 3000
-    ...The client app will boot — we can see it running in our browser at
-    localhost:3000. And our API server is up and listening at localhost:3001.
-    Hitting CTRL+C kills both processes together, humanely.
-
-7.) For our sanity, let's add a Rake task that executes this command for us.
-    Create the file ```lib/tasks/start.rake:```
-    ```
-    task :start do
-      exec 'foreman start -p 3000'
-    end
-    ```
-    ...We can now boot the app with:
-    ./portfolio-project/server (master) $ rake start
-    NOTE: the file is here:
-    https://github.com/fullstackreact/food-lookup-demo-rails/blob/master/lib/tasks/start.rake
-
-## Libraries Required for Final Project:
-./portfolio-project (master) $ rails new back-end-api --api
-./portfolio-project (master) $ npx create-react-app front-end
-./portfolio-project/front-end (master) $ npm install --save redux
-./portfolio-project/front-end (master) $ npx install redux react-redux
-./portfolio-project/front-end (master) $ npm install react-router-dom
-./portfolio-project/front-end (master) $ npm install --save redux-thunk
-./portfolio-project/front-end (master) $ npm install redux-logger ---- Vishwas method
-./portfolio-project/front-end (master) $ npm install axios redux-thunk ---- Vishwas method
-./portfolio-project/front-end (master) $ npm i --save redux-logger ---- Some guy
-./portfolio-project/front-end (master) $ npm install --save redux-devtools-extension ----Vishwas method
-NOTE: this last one is very important and makes the store a lot cleaner because you don't need this big bag verbage if you use it:
-"window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
-
-
-### Project File Structure
+## Project File Structure
 ```
 ├── app
 │   ├── controllers
@@ -350,4 +151,3 @@ NOTE: this last one is very important and makes the store a lot cleaner because 
 ├── Rakefile
 └── README.md
 ```
-## License Link
