@@ -152,3 +152,4 @@ When a user persists to the back-end database, the workflow follows the orange a
 ├── Rakefile
 └── README.md
 ```
+.
