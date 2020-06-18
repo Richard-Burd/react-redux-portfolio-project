@@ -5,7 +5,6 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
     case 'START_ADDING_AIRFRAMES_REQUEST':
       return {
         ...state,
-        airframes: [...state.airframes],
         loading: true
       }
 
@@ -21,7 +20,6 @@ const reducer = (state = { airframes: [], singleAirframe: {}, loading: false }, 
     case 'START_ADDING_AIRFRAME_REQUEST':
       return {
         ...state,
-        airframe: state.airframe,
         loading: true
       }
 

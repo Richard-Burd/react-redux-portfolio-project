@@ -5,7 +5,6 @@ const reducer = (state = { singleAttitude: {}, loading: false }, action) => {
     case 'START_ADDING_ATTITUDE_REQUEST':
       return {
         ...state,
-        attitude: state.attitude,
         loading: true
       }
 

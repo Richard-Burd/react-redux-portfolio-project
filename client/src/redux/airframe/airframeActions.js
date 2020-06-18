@@ -1,5 +1,8 @@
 import { AIRFRAMES_API_URL, AIRFRAMES_APP_URL } from '../urlAndUrns'
 
+// this function returns a function, therefore it is said to be "thunking"
+// we need the redux-thunk library installed and imported into the store.js
+// in order to execute asynchronous actions like this one.
 export const fetchAirframes = () => {
   return (dispatch) => { // fetch requests return a function that can have side effects
     dispatch({ type: 'START_ADDING_AIRFRAMES_REQUEST'}) // this will set loading to true
@@ -11,6 +14,13 @@ export const fetchAirframes = () => {
     })
   };
 }
+
+// a synchronous action creator would return an object (not a function as above) and would
+// look something like this:
+export const syncActionCreator = (optionalParams) => ({
+  type: 'NAME_OF_THE_ACTION_GOES_HERE_IN_CAPS',
+  payload: optionalParams
+})
 
 export function fetchAirframe(airframeId) {
   return (dispatch) => {

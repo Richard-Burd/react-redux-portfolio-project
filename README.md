@@ -39,6 +39,7 @@ While manipulating these parameters, the user is sending their changes to a loca
 
 
 ![Imgur](https://i.imgur.com/CQg659p.jpg)
+One of my [Flatiron School](https://flatironschool.com/) instructors pointed out that, in a situation with poor internet access, it may in fact be optimal to grab all the data you need at once (from the backend) so that when the connection *is* working, the user can take maximum advantage of that circumstance to effect their changes.  In such a case the `attitude`, `PID`, and `plugins` could be populated once a  `singleAirframe` is loaded into the store by altering the `show` action in `./app/controllers/airframes_controller.rb` so that it renders all associated parameter data at the same time that it renders the airframe data.
 
 ## Application Architecture
 

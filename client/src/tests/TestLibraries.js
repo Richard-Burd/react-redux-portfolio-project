@@ -19,7 +19,7 @@ export default class TestLibraries extends Component {
       <div>
         <p>"TestLibraries" - all libraries load properly if no red errors occur in console</p>
         <p style={{color: '#6D691B', backgroundColor: '#FFFDD9'}}>
-          A list of yellow errors should appear in the colsole that say each component
+          A list of yellow errors should appear in the console that say each component
           "...is defined but never used" - This checks to make sure that all of the necessary
           libraries are loading properly into this workspace.
         </p>

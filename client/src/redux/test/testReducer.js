@@ -5,7 +5,6 @@ const reducer = (state = { astronauts: [], loading: false }, action) => {
     case 'START_ADDING_ASTRONAUTS_REQUEST':
       return {
         ...state,
-        astronauts: [...state.astronauts],
         loading: true
       }
 
