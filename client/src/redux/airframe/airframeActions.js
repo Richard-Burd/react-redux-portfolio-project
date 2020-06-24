@@ -26,11 +26,12 @@ export function fetchAirframe(airframeId) {
   return (dispatch) => {
     dispatch({ type: 'START_ADDING_AIRFRAME_REQUEST'})
     fetch(`${AIRFRAMES_API_URL}/${airframeId}`).then(response => {
+      if (!response.ok) { throw new Error("An error has occured")} // <= should take info from back-end
       return response.json()
     })
     .then(responseJSON => {
       dispatch({ type: 'ADD_AIRFRAME', singleAirframe: responseJSON }) //singleAirframe is the payload
-    })
+    }).catch(err => console.log(err.message)) //<= This will only work w/ a 500 error from back-end
   };
 }
 
