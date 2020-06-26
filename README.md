@@ -3,11 +3,17 @@
 This is a portfolio project submittal for Module 16 of the Full-Stack Web Development program at Flatiron School.&nbsp; This project makes use of React and Redux together and is meant to show a basic level competency in those two JavaScript libraries.
 
 ## Getting Started
-To run this app locally, you will need to have [Rails](https://rubyonrails.org/) and [Node Package Manager](https://docs.npmjs.com/about-npm/) already installed.  After that type these commands into your console while in the app's main directory:
-1. `$ npm install` to get the necessary node libraries.
-2. `$ rails db: migrate` to run the ActiveRecord migrations
-3. `$ rails db: seed` to seed the database with three airframes & their parameters.
-4. `$ rails start` to boot up the server courtesy of: *./lib/tasks/start.rake*
+To run this app locally, you will need to have [Rails](https://rubyonrails.org/) and [Node Package Manager (NPM)](https://docs.npmjs.com/about-npm/) already installed.&nbsp;  After that, type this command into your console while inside the app's ***/client*** directory, which is the front-end workspace:
+
+ - `$ npm install`
+
+...this will install the required NPM libraries.&nbsp; Finally, navigate to the ***main*** project directory and run these commands:
+
+1. `$ bundle install` ... to install the [Ruby Gems](https://rubygems.org/).
+2. `$ rails db: migrate` ... to run the Active Record migrations
+3. `$ rails db: seed` ... to seed the database with three airframes & their parameters.
+4. `$ rails start` ... to boot up the server courtesy of: *./lib/tasks/start.rake*
+
 
 ## The Problem Being Solved
 
