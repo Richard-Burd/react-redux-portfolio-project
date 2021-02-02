@@ -49,14 +49,14 @@ One of my [Flatiron School](https://flatironschool.com/) instructors pointed out
 
 ## Application Architecture
 
-This app uses two communication paths as shown below.&nbsp;  First let's discuss the green arrows that say *request* and *read*:
+This app uses two communication paths as shown below.&nbsp;  First let's discuss the green arrows that say *request* and *subscribed*:
 
 
-![Imgur](https://i.imgur.com/uyd91GW.jpg)
+![Imgur](https://i.imgur.com/Es4OO6C.jpg)
 
-When rendering back-end data, React functional components (such as `AirframeData.js` ) send requests to the Redux layer, and the Redux layer in turn grabs the appropriate data from the server, and then puts it in the proper place within the central Redux store.&nbsp;  Once in store, all components in the app are able to access the data.
+When rendering back-end data, React functional components (such as `AirframeData.js` ) send (or more accurately,  *'implement'*) requests to their commensurate Redux action controller (in this case `airframeActions.js` and the action controller then dispatches the action to the central redux store that is wrapping the commensurate reducer, in this case, `airframeReducer.js`since were looking at airframes.&nbsp;  Redux then uses the middleware API to send an asynchronous fetch request to the Rails backend server that returns the appropriate data in the form of JSON.&nbsp;
 
-When a user persists to the back-end database, the workflow follows the orange arrows that say *create, update,* & *delete*.&nbsp;  Here, React container components like `Airframe.js` & `AirframeForm.js` that use a React class component's local state send requests to the Redux, action controllers, but bypass the Redux reducers & store and  go straight to the back-end server.&nbsp; This is immediately followed by a page reload and now the server and store are synced with changes traveling unidirectionally, from server to store and never the other way around.&nbsp;  This makes expansion and manipulation of the code base much easier because we are only keeping track of persistence in one direction as opposed to two.&nbsp; The philosophy here is: *if the user hasn't saved their changes, the store doesn't care to know about it yet.*
+When a user persists to the back-end database, the workflow follows the orange arrows that say *create, update,* & *delete*.&nbsp;  Here, React container components like `Airframe.js` & `AirframeForm.js` that use a React class component's local state send requests to the Redux, action controllers, but bypass the Redux reducers & store altogether and go straight to the back-end server.&nbsp; This is immediately followed by a page reload at which point the server and store are synced with changes traveling unidirectionally, from server to store and never the other way around.&nbsp;  This makes expansion and manipulation of the code base much easier because we are only keeping track of persistence in one direction as opposed to two.&nbsp; The philosophy here is: *if the user hasn't saved their changes, the store doesn't care to know about it yet.*
 
 ## Project File Structure
 ```
